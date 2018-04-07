@@ -35,7 +35,7 @@ public class WaterTile : Tile {
         {
             for (int y=-1; y <= 1; y++)
             {
-                if (HasWater(tilemap, new Vector3Int(position.x + x, position.y + y, position.z))
+                if (HasWater(tilemap, new Vector3Int(position.x + x, position.y + y, position.z)))
                 {
                     composition += 'W';
                 }
