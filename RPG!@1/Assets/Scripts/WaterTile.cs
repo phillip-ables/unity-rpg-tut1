@@ -29,6 +29,24 @@ public class WaterTile : Tile {
 
     public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
     {//change tile data for us when you refresh a tile
+        string composition = string.Empty;
+
+        for ( int x = -1; x <= 1; x++)
+        {
+            for (int y=-1; y <= 1; y++)
+            {
+                if (HasWater(tilemap, new Vector3Int(position.x + x, position.y + y, position.z))
+                {
+                    composition += 'W';
+                }
+                else
+                {
+                    composition += 'E';
+                }
+            }
+        }
+
+
         tileData.sprite = waterSprites[0];
     }
 
