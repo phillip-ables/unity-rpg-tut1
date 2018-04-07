@@ -10,17 +10,15 @@ public class WaterTile : Tile {
     private Sprite preview;
 
 #if UNITY_EDITOR
-    [MenuItem("Assets/Create/Tiles/WaterTile"]
+    [MenuItem("Assets/Create/Tiles/WaterTile")]
     public static void CreateWaterTile()
     {
-        //create a path inside our project
         string path = EditorUtility.SaveFilePanelInProject("Save Watertile", "New Watertile", "asset", "Save watertile", "Assets");
-        if(path == "")
+        if (path == "")
         {
             return;
         }
-        //if path exist we create the asset in our asset folder
-        AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<WaterTile>(), path)
+        AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<WaterTile>(), path);
     }
 #endif
 }
