@@ -17,6 +17,11 @@ public class WaterTile : Tile {
             {
                 Vector3Int nPos = new Vector3Int(position.x + x, position.y + y, position.z);
 
+
+                if (HasWater(tilemap, nPos))
+                {
+                    tilemap.RefreshTile(nPos);
+                }
             }
 
         }
@@ -26,7 +31,13 @@ public class WaterTile : Tile {
     {//change tile data for us when you refresh a tile
         tileData.sprite = waterSprites[0];
     }
-    
+
+    private bool HasWater(ITilemap tilemap, Vector3Int position)
+    {
+
+
+        return tilemap.GetTile(position) == this;
+    }
 
 
 
