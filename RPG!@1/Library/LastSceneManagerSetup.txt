@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/TileMap.unity
+- path: Assets/LaunchArc/LaunchArc.unity
   isLoaded: 1
   isActive: 1
