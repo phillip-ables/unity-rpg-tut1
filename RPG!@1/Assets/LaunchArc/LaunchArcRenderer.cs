@@ -29,9 +29,9 @@ public class LaunchArcRenderer : MonoBehaviour {
     void RenderArc()
     {
         lr.positionCount = (resolution + 1);
-        lr.SetPosition(CalculateArray());
+        lr.SetPositions(CalculateArray());
     }
-
+    
     Vector3[] CalculateArray()
     {
         Vector3[] arcArray = new Vector3[resolution + 1];
@@ -42,9 +42,17 @@ public class LaunchArcRenderer : MonoBehaviour {
         for(int i = 0; i <= resolution; i++)
         {
             float t = (float)i / (float)resolution;
-            arcArray[i] = CalculateArcPoint();
+            arcArray[i] = CalculateArcPoint(t, maxDistance);
         }
 
         return arcArray;
+    }
+
+    //calculate height and distance of each vertex
+    Vector3 CalculateArcPoint(float t, float maxDistance)
+    {
+        float x = t * maxDistance;
+        float y = x * Mathf.Tan(radianAngle) - ( (g * x * x) / (2 * velocity * velocity * Mathf.Cos(radianAngle) * Mathf.Cos(radianAngle)));
+        return new Vector3(x, y);
     }
 }
