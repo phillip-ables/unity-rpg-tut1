@@ -19,4 +19,17 @@ public class LaunchArcRenderer : MonoBehaviour {
         lr = GetComponent<LineRenderer>();
         g = Mathf.Abs(Physics2D.gravity.y);
     }
+
+    private void Start()
+    {
+        RenderArc();
+    }
+
+    //populating line renderer with settings
+    void RenderArc()
+    {
+        lr.positionCount = (resolution + 1);
+        lr.SetPosition(CalculateArray());
+    }
+    
 }
