@@ -43,8 +43,23 @@ public class LaunchArcMesh : MonoBehaviour
         mesh.Clear();  // 2d plane
         Vector3[] verticies = new Vector3[(resolution+1)*2];  //3d
 
-        int[] triangles = new int[resolution * 6];
+        int[] triangles = new int[resolution * 6 * 2];
 
+        for(int i = 0; i <= resolution; i++)
+        {
+            //set verticies
+            verticies[i * 2] = new Vector3(meshWidth * 0.5f, arcVerts[i].y, arcVerts[i].x);
+            verticies[i * 2 + 1] = new Vector3(meshWidth * -0.5f, arcVerts[i].y, arcVerts[i].x);
+
+            //set triangle
+            if (i == resolution)
+            {
+                triangles[i * 12] = i * 2;
+                triangles[i * 12 + 1] = triangles[i * 12 + 4] = (i + 1) * 2;
+                triangles[i * 12 + 2] = triangles[i * 12 + 3] = i + 2 + 1;
+                triangles[i * 12 + 5] = (i + 1) * 2 + 1;
+            }
+        }
     }
     
     Vector3[] CalculateArcArray()
