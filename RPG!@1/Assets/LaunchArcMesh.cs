@@ -33,16 +33,21 @@ public class LaunchArcMesh : MonoBehaviour
 
     private void Start()
     {
-        MakeArcMesh();
+        MakeArcMesh(CalculateArcArray());
     }
 
     //populating line renderer with settings
-    void MakeArcMesh()
+    void MakeArcMesh(Vector3[] arcVerts)
     {
+        //where we actualy create the mesh itself
+        mesh.Clear();  // 2d plane
+        Vector3[] verties = new Vector3[(resolution+1)*2];  //3d
+
+        int[] triangles = new int[resolution * 6];
 
     }
 
-    Vector3[] CalculateArray()
+    Vector3[] CalculateArcArray()
     {
         Vector3[] arcArray = new Vector3[resolution + 1];
 
