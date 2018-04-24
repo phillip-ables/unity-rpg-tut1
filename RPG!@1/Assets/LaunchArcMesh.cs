@@ -27,7 +27,7 @@ public class LaunchArcMesh : MonoBehaviour
     {
         if (mesh != null && Application.isPlaying)
         {
-            MakeArcMesh();
+            MakeArcMesh(CalculateArcArray());
         }
     }
 
@@ -41,12 +41,12 @@ public class LaunchArcMesh : MonoBehaviour
     {
         //where we actualy create the mesh itself
         mesh.Clear();  // 2d plane
-        Vector3[] verties = new Vector3[(resolution+1)*2];  //3d
+        Vector3[] verticies = new Vector3[(resolution+1)*2];  //3d
 
         int[] triangles = new int[resolution * 6];
 
     }
-
+    
     Vector3[] CalculateArcArray()
     {
         Vector3[] arcArray = new Vector3[resolution + 1];
