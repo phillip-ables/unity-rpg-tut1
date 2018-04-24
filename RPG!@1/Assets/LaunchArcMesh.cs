@@ -58,6 +58,11 @@ public class LaunchArcMesh : MonoBehaviour
                 triangles[i * 12 + 1] = triangles[i * 12 + 4] = (i + 1) * 2;
                 triangles[i * 12 + 2] = triangles[i * 12 + 3] = i + 2 + 1;
                 triangles[i * 12 + 5] = (i + 1) * 2 + 1;
+
+                triangles[i * 12 + 6] = i * 2;
+                triangles[i * 12 + 7] = triangles[i * 12 + 10] = (i + 1) * 2;
+                triangles[i * 12 + 8] = triangles[i * 12 + 9] = i + 2 + 1;
+                triangles[i * 12 + 11] = (i + 1) * 2 + 1;
             }
         }
     }
