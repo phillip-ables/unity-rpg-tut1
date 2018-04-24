@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class LaunchArcRenderer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    LineRenderer lr;
+
+    private void Awake()
+    {
+        lr = GetComponent<LineRenderer>();
+    }
 }
