@@ -31,5 +31,20 @@ public class LaunchArcRenderer : MonoBehaviour {
         lr.positionCount = (resolution + 1);
         lr.SetPosition(CalculateArray());
     }
-    
+
+    Vector3[] CalculateArray()
+    {
+        Vector3[] arcArray = new Vector3[resolution + 1];
+
+        radianAngle = Mathf.Deg2Rad * angle;
+        float maxDistance = (velocity * velocity * Mathf.Sin(2 * radianAngle) )/ g;
+
+        for(int i = 0; i <= resolution; i++)
+        {
+            float t = (float)i / (float)resolution;
+            arcArray[i] = CalculateArcPoint();
+        }
+
+        return arcArray;
+    }
 }
