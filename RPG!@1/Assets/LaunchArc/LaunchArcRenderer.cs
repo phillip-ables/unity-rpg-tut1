@@ -20,6 +20,15 @@ public class LaunchArcRenderer : MonoBehaviour {
         g = Mathf.Abs(Physics2D.gravity.y);
     }
 
+    //if inspector of this class changes, run this code agian;
+    private void OnValidate()
+    {
+        if(lr != null && Application.isPlaying)
+        {
+            RenderArc();
+        }
+    }
+
     private void Start()
     {
         RenderArc();
