@@ -6,8 +6,10 @@ public class PlayerMove : MonoBehaviour {
 
     public int playerSpeed = 10;
     public int playerJumpPower = 10;
+
     private float moveX;
     private bool facingRight = true;
+    private bool isGrounded;
 
     private void Update()
     {
@@ -18,7 +20,7 @@ public class PlayerMove : MonoBehaviour {
     {
         //CONTROLS
         moveX = Input.GetAxis("Horizontal");
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded)
             Jump();
         //ANIMATIONS
         //PLAYER DIRECTION
@@ -29,10 +31,18 @@ public class PlayerMove : MonoBehaviour {
         //PHYSICS
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     
-}
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            isGrounded = true;
+    }
 
     void Jump()
     {
+        isGrounded = flase;
+
         Vector2 velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
         velocity.y = playerJumpPower;
         gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
