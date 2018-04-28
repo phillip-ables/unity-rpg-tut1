@@ -253,6 +253,7 @@
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\SuperPlatFormBrothers\Scripts\PlayerScore.cs" />
     <Compile Include="Assets\WaterMap\Scripts\WaterTile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
