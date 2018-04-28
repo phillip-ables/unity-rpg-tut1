@@ -18,7 +18,19 @@ public class PlayerHealth : MonoBehaviour {
         {
             hasDied = true;
         }
-        Debug.Log("Player Has Died " + hasDied);
-    }
+        if(hasDied == true)
+        {
+            //start co-routine, 
+            //very similar to methods or functions
+            //but you can wait or pause
+            StartCoroutine("Die");
+        }
 
+        IEnumerable Die ()
+        {
+            Debug.Log("Player Has Fallen");
+            yield return new WaitForSeconds(2);
+            Debug.Log("Player Has Died!!");
+        }
+    }
 }
