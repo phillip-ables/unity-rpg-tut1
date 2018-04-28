@@ -17,13 +17,24 @@ public class PlayerMove : MonoBehaviour {
     void MovePlayer()
     {
         //CONTROLS
+        moveX = Input.GetAxis("Horizontal");
         //ANIMATIONS
         //PLAYER DIRECTION
+        if (moveX < 0.0f && facingRight == false)
+            FlipPlayer();
+        if (moveX > 0.0f && facingRight == true)
+            FlipPlayer();
         //PHYSICS
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
 
     void Jump()
     {
         //JUMPING CODE
+    }
+
+    void FlipPlayer()
+    {
+
     }
 }
