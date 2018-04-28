@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -29,8 +30,7 @@ public class PlayerHealth : MonoBehaviour {
 
     IEnumerator Die()
     {
-        Debug.Log("Player Has Fallen");
-        yield return new WaitForSeconds(2);
-        Debug.Log("Player Has Died!!");
+        SceneManager.LoadScene("SuperPlatformer");
+        yield return null;
     }
 }
