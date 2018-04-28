@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
 
     public int playerSpeed = 10;
-    public bool facingRight = true;
     public int playerJumpPower = 1250;
-    public float moveX;
+    private float moveX;
+    private bool facingRight = true;
 
     private void Update()
     {
@@ -18,6 +18,8 @@ public class PlayerMove : MonoBehaviour {
     {
         //CONTROLS
         moveX = Input.GetAxis("Horizontal");
+        if (Input.GetButtonDown("Jump"))
+            Jump();
         //ANIMATIONS
         //PLAYER DIRECTION
         if (moveX < 0.0f && facingRight == false)
@@ -26,11 +28,13 @@ public class PlayerMove : MonoBehaviour {
             FlipPlayer();
         //PHYSICS
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
-    }
+    
+}
 
     void Jump()
     {
         //JUMPING CODE
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
     }
 
     void FlipPlayer()
