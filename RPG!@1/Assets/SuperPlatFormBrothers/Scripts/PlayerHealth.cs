@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour {
 
     private void Update()
     {
-        if(gameObject.transform.position.y < -3)
+        if(gameObject.transform.position.y < -5.0f)
         {
             hasDied = true;
         }
