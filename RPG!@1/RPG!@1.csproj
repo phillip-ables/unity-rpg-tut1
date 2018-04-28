@@ -249,6 +249,7 @@
   <ItemGroup>
     <Compile Include="Assets\LaunchArc\LaunchArcRenderer.cs" />
     <Compile Include="Assets\LaunchArcMesh.cs" />
+    <Compile Include="Assets\SuperPlatFormBrothers\PlayerMove.cs" />
     <Compile Include="Assets\WaterMap\Scripts\WaterTile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
