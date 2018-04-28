@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/LaunchArc/LaunchArc.unity
+- path: Assets/SuperPlatFormBrothers/SuperPlatFormBrothers.unity
   isLoaded: 1
   isActive: 1
