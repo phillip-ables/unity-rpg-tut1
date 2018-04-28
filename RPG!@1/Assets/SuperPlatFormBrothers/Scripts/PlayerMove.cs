@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour {
 
     void Jump()
     {
-        isGrounded = flase;
+        isGrounded = false;
 
         Vector2 velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
         velocity.y = playerJumpPower;
