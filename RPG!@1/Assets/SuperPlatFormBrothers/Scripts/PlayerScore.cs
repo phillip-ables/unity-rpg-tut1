@@ -20,7 +20,7 @@ public class PlayerScore : MonoBehaviour {
     private void Update()
     {
         timeLeft -= Time.deltaTime;
-        timeUI.GetComponent<Text>().text = ("Time: " + (int)timeLeft));
+        timeUI.GetComponent<Text>().text = ("Time: " + (int)timeLeft);
         scoreUI.GetComponent<Text>().text = ("Score: " + playerScore);
 
         if (timeLeft < 0.1)
