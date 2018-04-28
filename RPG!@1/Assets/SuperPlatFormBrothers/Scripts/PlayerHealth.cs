@@ -24,13 +24,13 @@ public class PlayerHealth : MonoBehaviour {
             //very similar to methods or functions
             //but you can wait or pause
             StartCoroutine("Die");
-        }
+        }  
+    }
 
-        IEnumerable Die ()
-        {
-            Debug.Log("Player Has Fallen");
-            yield return new WaitForSeconds(2);
-            Debug.Log("Player Has Died!!");
-        }
+    IEnumerator Die()
+    {
+        Debug.Log("Player Has Fallen");
+        yield return new WaitForSeconds(2);
+        Debug.Log("Player Has Died!!");
     }
 }
