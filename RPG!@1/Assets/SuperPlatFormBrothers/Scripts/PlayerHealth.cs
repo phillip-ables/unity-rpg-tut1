@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public bool hasDied;
+    public int playerHealth;
+
+    private void Start()
+    {
+        hasDied = false;
+    }
+
+    private void Update()
+    {
+        if(gameObject.transform.position.y < -3)
+        {
+            hasDied = true;
+        }
+        Debug.Log("Player Has Died " + hasDied);
+    }
+
 }
