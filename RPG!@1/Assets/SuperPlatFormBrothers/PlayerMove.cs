@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour {
         //PLAYER DIRECTION
         if (moveX < 0.0f && facingRight == false)
             FlipPlayer();
-        if (moveX > 0.0f && facingRight == true)
+        else if (moveX > 0.0f && facingRight == true)
             FlipPlayer();
         //PHYSICS
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
@@ -33,8 +33,11 @@ public class PlayerMove : MonoBehaviour {
 
     void Jump()
     {
-        //JUMPING CODE
-        GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
+        Vector2 velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+        velocity.y = playerJumpPower;
+        gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
+        //AddForce wasn't working :(
+        //GetComponent<Rigidbody2D>().AddForce (Vector2.up * playerJumpPower);
     }
 
     void FlipPlayer()
