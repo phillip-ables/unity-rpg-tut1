@@ -205,8 +205,9 @@ GameObject:
   - component: {fileID: 672685189}
   - component: {fileID: 672685188}
   - component: {fileID: 672685187}
+  - component: {fileID: 672685191}
   m_Layer: 0
-  m_Name: Prototyping Art_preview_0
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,6 +305,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &672685191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672685186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e7ee12fb690a343a82c7fa21c531e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 3
+  facingRight: 1
+  playerJumpPower: 3
 --- !u!1 &1686080948
 GameObject:
   m_ObjectHideFlags: 0
