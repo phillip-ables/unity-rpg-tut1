@@ -247,10 +247,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraSystem.cs" />
-    <Compile Include="Assets\EnemyMove.cs" />
+    <Compile Include="Assets\LaunchArc\LaunchArcMesh.cs" />
     <Compile Include="Assets\LaunchArc\LaunchArcRenderer.cs" />
-    <Compile Include="Assets\LaunchArcMesh.cs" />
+    <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CameraSystem.cs" />
+    <Compile Include="Assets\SuperPlatFormBrothers\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\WaterMap\Scripts\WaterTile.cs" />
