@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class PlayerScore : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float timeLeft = 120;
+
+    private void Update()
+    {
+        timeLeft -= Time.deltaTime;
+    }
+
 }
