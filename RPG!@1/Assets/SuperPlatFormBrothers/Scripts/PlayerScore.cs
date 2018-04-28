@@ -15,10 +15,18 @@ public class PlayerScore : MonoBehaviour {
 
     private void Update()
     {
-        Debug.Log(timeLeft);
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0.1)
             SceneManager.LoadScene("SuperPlatFormBrothers");
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        CountScore();
+    }
+
+    void CountScore()
+    {
+        playerScore += (int)(timeLeft * 10);
+    }
 }
