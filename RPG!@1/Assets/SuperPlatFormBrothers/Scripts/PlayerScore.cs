@@ -15,6 +15,7 @@ public class PlayerScore : MonoBehaviour {
 
     private void Update()
     {
+        Debug.Log(timeLeft);
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0.1)
             SceneManager.LoadScene("SuperPlatFormBrothers");
