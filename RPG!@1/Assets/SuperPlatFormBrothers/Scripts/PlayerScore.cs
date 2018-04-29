@@ -29,8 +29,11 @@ public class PlayerScore : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Finish")
+        if (collision.gameObject.name == "Finish")
+        { 
             FinishLevel();
+            DataManagement.dataManagement.SaveData();
+        }
         if (collision.gameObject.name == "Coin")
         {
             playerScore += 10;
@@ -40,7 +43,11 @@ public class PlayerScore : MonoBehaviour {
 
     void FinishLevel()
     {
+        Debug.Log("Data Says High Score Is: " + DataManagement.dataManagement.highScore);
         playerScore += (int)(timeLeft * 10);
+        DataManagement.dataManagement.highScore = playerScore;
         DataManagement.dataManagement.SaveData();
+        Debug.Log("Data Says High Score Is: " + DataManagement.dataManagement.highScore);
+
     }
 }
