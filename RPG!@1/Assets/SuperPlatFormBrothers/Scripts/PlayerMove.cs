@@ -7,7 +7,8 @@ public class PlayerMove : MonoBehaviour {
     public int playerSpeed;
     public int playerJumpPower;
     public float downDistance;
-    public int colBounce;
+    public int playBounce;
+    public int enBounce;
 
     private float moveX;
     private bool facingRight = true;
@@ -15,8 +16,9 @@ public class PlayerMove : MonoBehaviour {
 
     private void Update()
     {
-        MovePlayer();
         PlayerRaycast();
+        MovePlayer();
+
     }
 
     void MovePlayer()
@@ -58,14 +60,21 @@ public class PlayerMove : MonoBehaviour {
     void PlayerRaycast()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
-        if (hit.distance < downDistance)
+        if (hit.collider != null 
+                && hit.distance < downDistance)
         {
             if (hit.collider.tag != "Enemy")
                 isGrounded = true;
             else
             {
-                GetComponent<Rigidbody2D>().AddForce(Vector2.up * colBounce);
-                Destroy(hit.collider.gameObject);
+                GetComponent<Rigidbody2D>().AddForce(Vector2.up * playBounce);
+                GameObject enemy = hit.collider.gameObject;
+                enemy.GetComponent<Rigidbody2D> ().AddForce(Vector2.right * enBounce);
+                enemy.GetComponent<Rigidbody2D>().gravityScale = 20;
+                enemy.GetComponent<Rigidbody2D>().freezeRotation = false;
+                enemy.GetComponent<BoxCollider2D>().enabled = false;
+                enemy.GetComponent<EnemyMove>().enabled = false;
+                //Destroy(hit.collider.gameObject);
             }
         }
             

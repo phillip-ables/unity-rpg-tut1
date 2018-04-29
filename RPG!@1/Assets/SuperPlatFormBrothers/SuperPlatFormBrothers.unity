@@ -409,7 +409,8 @@ MonoBehaviour:
   playerSpeed: 8
   playerJumpPower: 15
   downDistance: 0.9
-  colBounce: 1000
+  playBounce: 800
+  enBounce: 600
 --- !u!114 &672685192
 MonoBehaviour:
   m_ObjectHideFlags: 0
