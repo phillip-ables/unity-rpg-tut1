@@ -11,7 +11,6 @@ public class PlayerMove : MonoBehaviour {
     public int enBounce;
 
     private float moveX;
-    private bool facingRight = true;
     private bool isGrounded;
 
     private void Update()
@@ -29,10 +28,10 @@ public class PlayerMove : MonoBehaviour {
             Jump();
         //ANIMATIONS
         //PLAYER DIRECTION
-        if (moveX < 0.0f && facingRight == false)
-            FlipPlayer();
-        else if (moveX > 0.0f && facingRight == true)
-            FlipPlayer();
+        if (moveX < 0.0f)
+            GetComponent<SpriteRenderer>().flipX = true;
+        else if (moveX > 0.0f)
+            GetComponent<SpriteRenderer>().flipX = false;
         //PHYSICS
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     
@@ -47,14 +46,6 @@ public class PlayerMove : MonoBehaviour {
         gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
         //AddForce wasn't working :(
         //GetComponent<Rigidbody2D>().AddForce (Vector2.up * playerJumpPower);
-    }
-
-    void FlipPlayer()
-    {
-        facingRight = !facingRight;
-        Vector2 localScale = gameObject.transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
     }
 
     void PlayerRaycast()
