@@ -36,12 +36,6 @@ public class PlayerMove : MonoBehaviour {
     
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-            isGrounded = true;
-    }
-
     void Jump()
     {
         isGrounded = false;
@@ -66,7 +60,9 @@ public class PlayerMove : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
         if (hit.distance < downDistance)
         {
-            if (hit.collider.tag == "Enemy")
+            if (hit.collider.tag != "Enemy")
+                isGrounded = true;
+            else
             {
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * colBounce);
                 Destroy(hit.collider.gameObject);
