@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 109
+  controlID: 13
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 50
+  controlID: 27
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,14 +343,14 @@ MonoBehaviour:
     height: 758
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 243.72377353846153
+  lastFramingTime: 108.32769682051281
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 49.31, y: 0, z: 0}
+    m_Target: {x: -6.27, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 49.31, y: 0, z: 0}
+    m_Value: {x: -6.27, y: 0, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -378,9 +378,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.436004
+    m_Target: 12.34837
     speed: 2
-    m_Value: 13.436004
+    m_Value: 12.34837
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -421,9 +421,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 66f0ffff
-    m_LastClickedID: -3994
-    m_ExpandedIDs: 96fbffff00000000
+    m_SelectedIDs: d02b0000
+    m_LastClickedID: 11216
+    m_ExpandedIDs: 96fbffff00000000b62b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -485,19 +485,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/SuperPlatFormBrothers
+    - Assets/SuperPlatFormBrothers/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/SuperPlatFormBrothers
+  - Assets/SuperPlatFormBrothers/Prefabs
   m_LastFoldersGridSize: 46
   m_LastProjectPath: C:\Users\phill\Desktop\code\unity-rpg-tut1\RPG!@1
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8c2a0000
-    m_LastClickedID: 10892
-    m_ExpandedIDs: 000000009c2900008c2a0000b02a000000ca9a3bffffff7f
+    m_SelectedIDs: e8290000
+    m_LastClickedID: 10728
+    m_ExpandedIDs: 000000009c290000902a0000b42a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -525,7 +525,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009c2900008c2a0000b02a0000
+    m_ExpandedIDs: 000000009c290000902a0000b42a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,7 +577,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 127}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 46
   m_DirectoriesAreaWidth: 110
 --- !u!114 &15
