@@ -59,16 +59,17 @@ public class PlayerMove : MonoBehaviour {
 
     void PlayerRaycast()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
-        if (hit.collider != null 
-                && hit.distance < downDistance)
+        
+        RaycastHit2D rayDown = Physics2D.Raycast(transform.position, Vector2.down);
+        if (rayDown.collider != null 
+                && rayDown.distance < downDistance)
         {
-            if (hit.collider.tag != "Enemy")
+            if (rayDown.collider.tag != "Enemy")
                 isGrounded = true;
             else
             {
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * playBounce);
-                GameObject enemy = hit.collider.gameObject;
+                GameObject enemy = rayDown.collider.gameObject;
                 enemy.GetComponent<Rigidbody2D> ().AddForce(Vector2.right * enBounce);
                 enemy.GetComponent<Rigidbody2D>().gravityScale = 4;
                 enemy.GetComponent<Rigidbody2D>().freezeRotation = false;
