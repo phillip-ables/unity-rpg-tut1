@@ -70,11 +70,10 @@ public class PlayerMove : MonoBehaviour {
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * playBounce);
                 GameObject enemy = hit.collider.gameObject;
                 enemy.GetComponent<Rigidbody2D> ().AddForce(Vector2.right * enBounce);
-                enemy.GetComponent<Rigidbody2D>().gravityScale = 20;
+                enemy.GetComponent<Rigidbody2D>().gravityScale = 4;
                 enemy.GetComponent<Rigidbody2D>().freezeRotation = false;
                 enemy.GetComponent<BoxCollider2D>().enabled = false;
                 enemy.GetComponent<EnemyMove>().enabled = false;
-                //Destroy(hit.collider.gameObject);
             }
         }
             

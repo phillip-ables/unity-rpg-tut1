@@ -21,7 +21,6 @@ public class EnemyMove : MonoBehaviour {
             if (hit.collider.tag == "Player")
                 Destroy(hit.collider.gameObject);
         }
-
     }
 
     void Flip()
