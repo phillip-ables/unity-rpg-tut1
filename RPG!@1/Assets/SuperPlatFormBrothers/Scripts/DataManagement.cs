@@ -11,4 +11,17 @@ public class DataManagement : MonoBehaviour {
 
     public int highScore;
 
+    private void Awake()
+    {
+        if ( dataManagement == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            dataManagement = this;
+        }
+        else if (dataManagement != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
