@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour {
     {
         RaycastHit2D rayUp = Physics2D.Raycast(transform.position, Vector2.up);
         if(rayUp.collider != null
-                &&rayUp.distance < castDistance)
+                && rayUp.distance < castDistance)
         {
             Destroy(rayUp.collider.gameObject);
         }

@@ -420,10 +420,10 @@ MonoBehaviour:
     height: 281
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 104}
-    m_SelectedIDs: 942b0000
-    m_LastClickedID: 11156
-    m_ExpandedIDs: 8afbffff8cfbffff8efbffff96fbffff00000000702b00009e2b0000ba2b0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 502a0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 96fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -485,19 +485,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/SuperPlatFormBrothers/Scripts
+    - Assets/SuperPlatFormBrothers
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/SuperPlatFormBrothers/Scripts
+  - Assets/SuperPlatFormBrothers
   m_LastFoldersGridSize: 46
   m_LastProjectPath: C:\Users\phill\Desktop\code\unity-rpg-tut1\RPG!@1
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca2a0000
-    m_LastClickedID: 10954
-    m_ExpandedIDs: 00000000a02900007e2a0000a22a000000ca9a3bffffff7f
+    m_SelectedIDs: 8c2a0000
+    m_LastClickedID: 10892
+    m_ExpandedIDs: 000000009c2900008c2a0000b02a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -525,7 +525,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a02900007e2a0000a22a0000
+    m_ExpandedIDs: 000000009c2900008c2a0000b02a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -552,8 +552,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: b4270000522b00003e2a0000482a0000502a0000582a0000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: b4270000522b00003e2a0000482a0000582a0000562c0000642c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

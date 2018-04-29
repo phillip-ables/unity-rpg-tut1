@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 8
   playerJumpPower: 15
-  castDistance: 0
+  castDistance: 0.8
   playBounce: 800
   enBounce: 600
 --- !u!114 &672685192
@@ -841,6 +841,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fccf43c9488432d45bccd20a7466c27b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1538326127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1538326129}
+  - component: {fileID: 1538326128}
+  m_Layer: 0
+  m_Name: DataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1538326128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538326127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0489169db9032948958a25933dd72ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScore: 0
+--- !u!4 &1538326129
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538326127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.31, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543346791
 GameObject:
   m_ObjectHideFlags: 0
