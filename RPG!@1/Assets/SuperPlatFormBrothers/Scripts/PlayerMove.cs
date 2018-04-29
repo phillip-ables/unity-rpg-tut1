@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
-    public int playerSpeed = 10;
-    public int playerJumpPower = 10;
+    public int playerSpeed;
+    public int playerJumpPower;
+    public float downDistance;
 
     private float moveX;
     private bool facingRight = true;
@@ -61,6 +62,12 @@ public class PlayerMove : MonoBehaviour {
 
     void PlayerRaycast()
     {
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+        if (hit.distance < downDistance 
+                && hit.collider.tag == "Enemy")
+        {
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
+        }
+            
     }
 }

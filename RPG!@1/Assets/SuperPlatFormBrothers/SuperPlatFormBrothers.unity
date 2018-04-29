@@ -408,6 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 8
   playerJumpPower: 15
+  downDistance: 0.9
 --- !u!114 &672685192
 MonoBehaviour:
   m_ObjectHideFlags: 0
