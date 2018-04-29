@@ -7,6 +7,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class DataManagement : MonoBehaviour {
 
-    
+    public static DataManagement dataManagement;
+
+    public int highScore;
 
 }
