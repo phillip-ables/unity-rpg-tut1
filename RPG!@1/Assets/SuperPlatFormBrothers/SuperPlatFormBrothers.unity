@@ -961,7 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 8
   playerJumpPower: 15
-  castDistance: 0.8
+  castDistance: 1.3
   playBounce: 800
   enBounce: 600
 --- !u!50 &1571879841
