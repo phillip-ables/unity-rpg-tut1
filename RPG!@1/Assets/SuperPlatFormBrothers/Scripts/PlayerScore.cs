@@ -30,7 +30,7 @@ public class PlayerScore : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name == "Finish")
-            CountScore();
+            FinishLevel();
         if (collision.gameObject.name == "Coin")
         {
             playerScore += 10;
@@ -38,8 +38,9 @@ public class PlayerScore : MonoBehaviour {
         }
     }
 
-    void CountScore()
+    void FinishLevel()
     {
         playerScore += (int)(timeLeft * 10);
+        DataManagement.dataManagement.SaveData();
     }
 }
