@@ -30,6 +30,11 @@ public class DataManagement : MonoBehaviour {
         BinaryFormatter BinForm = new BinaryFormatter();
         //creates file
         FileStream file = File.Create(Application.persistentDataPath + "/gameInfo.dat");
+        //creates container for data
+        gameData data = new gameData();
+        data.highScore = highScore;
+        BinForm.Serialize(file, data);
+        file.Close();
     }
 
     public void LoadData()
