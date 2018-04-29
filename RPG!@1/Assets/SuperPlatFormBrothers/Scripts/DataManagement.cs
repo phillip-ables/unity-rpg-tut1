@@ -26,7 +26,10 @@ public class DataManagement : MonoBehaviour {
 
     public void SaveData ()
     {
-
+        //creates binary formatter
+        BinaryFormatter BinForm = new BinaryFormatter();
+        //creates file
+        FileStream file = File.Create(Application.persistentDataPath + "/gameInfo.dat");
     }
 
     public void LoadData()
@@ -34,4 +37,10 @@ public class DataManagement : MonoBehaviour {
 
     }
 
+}
+
+[Serializable]
+class gameData
+{
+    public int highScore;
 }
