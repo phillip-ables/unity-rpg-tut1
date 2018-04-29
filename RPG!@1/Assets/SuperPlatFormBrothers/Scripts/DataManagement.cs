@@ -24,4 +24,14 @@ public class DataManagement : MonoBehaviour {
         }
     }
 
+    public void SaveData ()
+    {
+
+    }
+
+    public void LoadData()
+    {
+
+    }
+
 }
