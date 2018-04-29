@@ -41,7 +41,11 @@ public class DataManagement : MonoBehaviour {
     {
         if (File.Exists (Application.persistentDataPath+ "/gameInfo.dat"))
         {
-
+            BinaryFormatter BinForm = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/gameInfo.dat", FileMode.Open);
+            gameData data = (gameData)BinForm.Deserialize(file);
+            file.Close();
+            highScore = data.highScore;
         }
     }
 
