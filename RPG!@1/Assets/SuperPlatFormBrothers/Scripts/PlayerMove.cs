@@ -14,6 +14,7 @@ public class PlayerMove : MonoBehaviour {
     private void Update()
     {
         MovePlayer();
+        PlayerRaycast();
     }
 
     void MovePlayer()
@@ -56,5 +57,10 @@ public class PlayerMove : MonoBehaviour {
         Vector2 localScale = gameObject.transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+
+    void PlayerRaycast()
+    {
+
     }
 }
