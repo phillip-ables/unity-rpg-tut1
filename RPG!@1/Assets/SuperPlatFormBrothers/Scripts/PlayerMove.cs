@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour {
 
     public int playerSpeed;
     public int playerJumpPower;
-    public float downDistance;
+    public float castDistance;
     public int playBounce;
     public int enBounce;
 
@@ -59,10 +59,15 @@ public class PlayerMove : MonoBehaviour {
 
     void PlayerRaycast()
     {
-        
+        RaycastHit2D rayUp = Physics2D.Raycast(transform.position, Vector2.up);
+        if(rayUp.collider != null
+                &&rayUp.distance < castDistance)
+        {
+            Destroy(rayUp.collider.gameObject);
+        }
         RaycastHit2D rayDown = Physics2D.Raycast(transform.position, Vector2.down);
         if (rayDown.collider != null 
-                && rayDown.distance < downDistance)
+                && rayDown.distance < castDistance)
         {
             if (rayDown.collider.tag != "Enemy")
                 isGrounded = true;
