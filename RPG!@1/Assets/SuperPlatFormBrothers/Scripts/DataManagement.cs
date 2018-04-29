@@ -39,7 +39,10 @@ public class DataManagement : MonoBehaviour {
 
     public void LoadData()
     {
+        if (File.Exists (Application.persistentDataPath+ "/gameInfo.dat"))
+        {
 
+        }
     }
 
 }
