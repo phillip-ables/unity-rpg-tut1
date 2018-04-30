@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/SuperPlatFormBrothers/SuperPlatFormBrothers.unity
+- path: Assets/SuperPlatFormBrothers/BrotherSelect.unity
   isLoaded: 1
   isActive: 1
