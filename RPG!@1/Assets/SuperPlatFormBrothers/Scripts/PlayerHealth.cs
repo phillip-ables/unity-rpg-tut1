@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 
     private void Update()
     {
-        if(gameObject.transform.position.y < -5.0f)
+        if(gameObject.transform.position.y < -16.0f)
         {
             Die();
         }

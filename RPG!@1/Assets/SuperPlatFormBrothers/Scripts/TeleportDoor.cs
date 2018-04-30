@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class TeleportDoor : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject spawnPoint;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("Teleport");
+        collision.gameObject.transform.position = spawnPoint.gameObject.transform.position;
+    }
+
 }
