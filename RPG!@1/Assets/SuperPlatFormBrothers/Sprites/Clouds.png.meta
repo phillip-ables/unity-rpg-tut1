@@ -6,7 +6,11 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Clouds_0
     21300002: Clouds_1
-    21300004: Clouds_2
+    21300004: Clouds_1
+    21300006: Clouds_3
+    21300008: Clouds_2
+    21300010: Clouds_5
+    21300012: Clouds_6
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -107,12 +111,12 @@ TextureImporter:
       name: Clouds_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 427
-        width: 368
-        height: 92
+        x: 289
+        y: 508
+        width: 197
+        height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +125,12 @@ TextureImporter:
       name: Clouds_1
       rect:
         serializedVersion: 2
-        x: 289
-        y: 508
-        width: 197
-        height: 65
+        x: 33
+        y: 427
+        width: 368
+        height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -135,12 +139,12 @@ TextureImporter:
       name: Clouds_2
       rect:
         serializedVersion: 2
-        x: 360
-        y: 395
-        width: 398
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 331
+        y: 167
+        width: 405
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
