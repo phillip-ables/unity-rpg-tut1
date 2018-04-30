@@ -7,7 +7,7 @@ public class CharacterSelector : MonoBehaviour {
 
     public void ChooseCharacter(int characterIndex)
     {
-
+        PlayerPrefs.SetInt("SelectedCharacter", characterIndex);
     }
 
     public void LoadScene()
