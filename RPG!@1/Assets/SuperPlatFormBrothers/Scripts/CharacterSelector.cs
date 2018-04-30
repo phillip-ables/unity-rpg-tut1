@@ -12,7 +12,7 @@ public class CharacterSelector : MonoBehaviour {
 
     public void LoadScene()
     {
-
+        SceneManager.LoadScene("SuperPlatFormBrothers");
     }
 
 }
