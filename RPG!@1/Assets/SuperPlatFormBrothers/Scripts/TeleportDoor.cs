@@ -8,7 +8,6 @@ public class TeleportDoor : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Teleport");
         collision.gameObject.transform.position = spawnPoint.gameObject.transform.position;
     }
 
