@@ -247,16 +247,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Clouds.cs" />
     <Compile Include="Assets\LaunchArc\LaunchArcMesh.cs" />
     <Compile Include="Assets\LaunchArc\LaunchArcRenderer.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CameraSystem.cs" />
+    <Compile Include="Assets\SuperPlatFormBrothers\Scripts\Clouds.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\DataManagement.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\PlayerScore.cs" />
+    <Compile Include="Assets\SuperPlatFormBrothers\Scripts\TeleportDoor.cs" />
     <Compile Include="Assets\WaterMap\Scripts\WaterTile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
