@@ -249,9 +249,9 @@
   <ItemGroup>
     <Compile Include="Assets\LaunchArc\LaunchArcMesh.cs" />
     <Compile Include="Assets\LaunchArc\LaunchArcRenderer.cs" />
-    <Compile Include="Assets\SuperPlatFormBrothers\CharacterSpawner.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CameraSystem.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CharacterSelector.cs" />
+    <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CharacterSpawner.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\Clouds.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\DataManagement.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\EnemyHealth.cs" />

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/SuperPlatFormBrothers/SuperPlatFormBrothers.unity
+- path: Assets/MeatBoyMovement/MeatBoy1.unity
   isLoaded: 1
   isActive: 1
