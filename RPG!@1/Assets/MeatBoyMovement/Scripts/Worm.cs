@@ -16,6 +16,11 @@ public class Worm : MonoBehaviour {
         currentPos = transform.position;
 
         //positions verticies
+        Vector2[] verticies =
+        {
+            new Vector2(1.736f, -2.098f),
+            new Vector2(1.736f, 1.93f)
+        };
 
         for(int i = 0; i < vertixDistance/spriteLength; i++)
         {
