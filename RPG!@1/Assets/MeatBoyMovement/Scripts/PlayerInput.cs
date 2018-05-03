@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour {
+    
+    private bool isOnGround()
+    {
+        float lengthToSearch = 0.1f;
+        float colliderThreshold = 0.001f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        //this is using the bottom of the sprite might cause error
+        Vector2 linestart = new Vector2(this.transform.position.x, this.transform.position.y - this.renderer.bounds.extends.y - colliderThreshold);
+    }
+
 }
