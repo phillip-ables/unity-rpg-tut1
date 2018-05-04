@@ -9,6 +9,7 @@ public class Worm : MonoBehaviour {
     public float straightLength;
     public float xChangePer, yChangePer;
     public int count = 0;
+    public float iterRate;
 
     private float spriteLength = 0.18f;
     //private float slope;
@@ -45,17 +46,22 @@ public class Worm : MonoBehaviour {
             yChangePer = (verticies[i].y - currentPos.y) / (straightLength / spriteLength);
 
             for (int j = 0; j < straightLength / spriteLength; j++)
-            {
-                Instantiate(wormSprite, currentPos, Quaternion.identity);
-                currentPos = new Vector3(
-                                        currentPos.x + xChangePer,
-                                        currentPos.y + yChangePer,
-                                        currentPos.z
-                                        );
-                count++;
+            {                
+                
+                StartCoroutine(InstaWorm());
             }
         }
         print(count);
     }
-	
+
+    IEnumerator InstaWorm()
+    {
+        Instantiate(wormSprite, currentPos, Quaternion.identity);
+        currentPos = new Vector3(
+                        currentPos.x + xChangePer,
+                        currentPos.y + yChangePer,
+                        currentPos.z
+                        );
+        yield return new WaitForSeconds(iterRate);
+    }
 }
