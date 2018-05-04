@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Test : MonoBehaviour {
 
+    IEnumerator currentMoveCoroutine;
 
     private void Start()
     {
@@ -11,6 +12,19 @@ public class Test : MonoBehaviour {
         string[] messages = { "welcom", "TO", "this", "AMAZING", "game" };
         StartCoroutine(PrintMessages(messages, .5f));
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(currentMoveCoroutine != null)
+            {
+                StopCoroutine(currentMoveCoroutine);
+            }
+            currentMoveCoroutine = Move(Random.onUnitSphere * 5, 8);
+            StartCoroutine(currentMoveCoroutine);
+        }
     }
 
     IEnumerator Move(Vector3 destination, float speed)
