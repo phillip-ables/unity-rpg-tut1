@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Test : MonoBehaviour {
 
+    public Transform[] path;
     IEnumerator currentMoveCoroutine;
 
     private void Start()
@@ -11,7 +12,7 @@ public class Test : MonoBehaviour {
 
         string[] messages = { "welcom", "TO", "this", "AMAZING", "game" };
         StartCoroutine(PrintMessages(messages, .5f));
-
+        StartCoroutine(FollowPath());
     }
 
     private void Update()
@@ -24,6 +25,14 @@ public class Test : MonoBehaviour {
             }
             currentMoveCoroutine = Move(Random.onUnitSphere * 5, 8);
             StartCoroutine(currentMoveCoroutine);
+        }
+    }
+
+    IEnumerator FollowPath()
+    {
+        foreach (Transform waypoint in path)
+        {
+            yield return StartCoroutine(Move(waypoint.position, 8));
         }
     }
 
