@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/CoRoutines/CoRoutineOfficial.unity
+- path: Assets/MeatBoyMovement/MeatBoy1.unity
   isLoaded: 1
   isActive: 1
