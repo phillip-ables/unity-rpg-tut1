@@ -6,15 +6,25 @@ public class Worm : MonoBehaviour {
 
     public Vector2[] verticies;
     public GameObject wormSprite;
+    public GameObject wormHead;
     public float slowDistance;
+    public float wormAcc;
+    private float delay = .1f;
+
 
 
     private float spriteLength = 0.18f;
     private float straightLength;
     private float xChangePer, yChangePer;
-    private float delay;
     private Vector3 currentPos;
     
+
+    /*
+     * switch to transform array
+     * move through way points
+     * body need to be parented
+     * instantiate at distance long enough from spawn
+    */
 
 	void Start () {
         StartCoroutine(MakeSnake());
@@ -23,6 +33,8 @@ public class Worm : MonoBehaviour {
     IEnumerator MakeSnake()
     {
         currentPos = transform.position;
+        GameObject head = Instantiate(wormHead, currentPos, Quaternion.identity);
+
 
         //positions verticies
         //this should be turned into a public transform of waypoint gameObjects
@@ -38,39 +50,30 @@ public class Worm : MonoBehaviour {
         for (int i = 0; i <= verticies.Length; i++) //2
         {
             //distance formula
-            straightLength = Mathf.Sqrt(
-                                        ((verticies[i].y - currentPos.y) * (verticies[i].y - currentPos.y))
-                                        + ((verticies[i].x - currentPos.x) * (verticies[i].x - currentPos.x))
-                                        );
-
-
+            straightLength = Mathf.Sqrt(((verticies[i].y - currentPos.y) * (verticies[i].y - currentPos.y))
+                                        + ((verticies[i].x - currentPos.x) * (verticies[i].x - currentPos.x)));
             xChangePer = (verticies[i].x - currentPos.x) / (straightLength / spriteLength);
             yChangePer = (verticies[i].y - currentPos.y) / (straightLength / spriteLength);
+            
 
-            /*
-             * needs to be parented
-             * and under a move to coroutine
-             * if last child and spawn point are far enough spawn new sprite
-             * 
-            */
-
-
-
+            //look at next vertex!!
             for (int j = 0; j < straightLength / spriteLength; j++)
             {
                 //need a slow down effect
                 if (Mathf.Abs((verticies[i].x - currentPos.x)) < slowDistance
                         && Mathf.Abs((verticies[i].y - currentPos.y)) < slowDistance)
                 {
-                    //delay *= wormAcc;
-                    delay = 0.2f;
+                    delay *= wormAcc;
+                    print("SlowDown "+delay);
+                    //delay = 0.2f;
                 }
                 else
                 {
-                    //delay /= wormAcc;
-                    delay = 0.08f;
+                    delay /= wormAcc;
+                    print("SpeedUp " + delay);
+                    //delay = 0.08f;
                 }
-
+                head.transform.position = currentPos;
                 Instantiate(wormSprite, currentPos, Quaternion.identity);
                 currentPos = new Vector3(
                                 currentPos.x + xChangePer,
