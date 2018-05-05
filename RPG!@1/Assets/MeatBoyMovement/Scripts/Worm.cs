@@ -12,12 +12,15 @@ public class Worm : MonoBehaviour {
     private float delay = .1f;
 
 
+    private float rotDeg = 90;
+
+
 
     private float spriteLength = 0.18f;
     private float straightLength;
 
     private Vector3 relativePosition;
-    private Quaternion targetRotation;
+    private Quaternion turnRotation;
     private bool rotating = false;
     private float rotationTime;
 
@@ -40,7 +43,7 @@ public class Worm : MonoBehaviour {
     {
         currentPos = transform.position;
         GameObject head = Instantiate(wormHead, currentPos, Quaternion.identity);
-        
+
         for (int i = 0; i <= verticies.Length; i++) //2
         {
             //distance formula
@@ -50,24 +53,36 @@ public class Worm : MonoBehaviour {
             yChangePer = (verticies[i].position.y - currentPos.y) / (straightLength / spriteLength);
 
 
-            //look at next vertex!!
 
 
+
+            //you dont need to think you need to know
+
+            //law of sins
+            //tan inverse equals
+            float adj = verticies[i + 1].position.x - currentPos.x;
+            float opp = verticies[i + 1].position.y - currentPos.y;
+            float thetaA = Mathf.Atan(opp/adj);
+            print("adj "+adj+", opp "+opp+", theta "+rotDeg);
+
+
+            rotDeg += 90;
 
             for (int j = 0; j < straightLength / spriteLength; j++)
             {
+
                 //need a slow down effect
                 if (Mathf.Abs((verticies[i].position.x - currentPos.x)) < slowDistance
                         && Mathf.Abs((verticies[i].position.y - currentPos.y)) < slowDistance)
                 {
                     delay *= wormAcc;
-                    print("SlowDown "+delay);
+                    //print("SlowDown "+delay);
                     //delay = 0.2f;
                 }
                 else
                 {
                     delay /= wormAcc;
-                    print("SpeedUp " + delay);
+                    //print("SpeedUp " + delay);
                     //delay = 0.08f;
                 }
                 head.transform.position = currentPos;
@@ -79,6 +94,7 @@ public class Worm : MonoBehaviour {
                                 );
                 yield return new WaitForSeconds(delay);
             }
+            head.transform.rotation = Quaternion.Euler(0, 0, rotDeg);
         }
     }
 }
