@@ -47,9 +47,30 @@ public class Worm : MonoBehaviour {
             xChangePer = (verticies[i].x - currentPos.x) / (straightLength / spriteLength);
             yChangePer = (verticies[i].y - currentPos.y) / (straightLength / spriteLength);
 
+            /*
+             * needs to be parented
+             * and under a move to coroutine
+             * if last child and spawn point are far enough spawn new sprite
+             * 
+            */
+
+
+
             for (int j = 0; j < straightLength / spriteLength; j++)
             {
-                
+                //need a slow down effect
+                if (Mathf.Abs((verticies[i].x - currentPos.x)) < slowDistance
+                        && Mathf.Abs((verticies[i].y - currentPos.y)) < slowDistance)
+                {
+                    //delay *= wormAcc;
+                    delay = 0.2f;
+                }
+                else
+                {
+                    //delay /= wormAcc;
+                    delay = 0.08f;
+                }
+
                 Instantiate(wormSprite, currentPos, Quaternion.identity);
                 currentPos = new Vector3(
                                 currentPos.x + xChangePer,

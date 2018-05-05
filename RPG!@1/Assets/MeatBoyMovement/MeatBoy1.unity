@@ -2858,7 +2858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticies: []
   wormSprite: {fileID: 1267479144646176, guid: 4dafbc8fb98fc11418b02800cced0ba0, type: 2}
-  slowDistance: 1.61
+  slowDistance: 2
 --- !u!1 &1751670606
 GameObject:
   m_ObjectHideFlags: 0
