@@ -15,12 +15,18 @@ public class Worm : MonoBehaviour {
 
     private float spriteLength = 0.18f;
     private float straightLength;
+
+    private Vector3 relativePosition;
+    private Quaternion targetRotation;
+    private bool rotating = false;
+    private float rotationTime;
+
     private float xChangePer, yChangePer;
     private Vector3 currentPos;
     
 
     /*
-     * switch to transform array
+     * head turn toward next waypoint
      * move through way points
      * body need to be parented
      * instantiate at distance long enough from spawn
@@ -45,7 +51,9 @@ public class Worm : MonoBehaviour {
 
 
             //look at next vertex!!
-            head.transform.LookAt(verticies[i].position);
+
+
+
             for (int j = 0; j < straightLength / spriteLength; j++)
             {
                 //need a slow down effect
