@@ -57,13 +57,23 @@ public class Worm : MonoBehaviour {
             {
                 //law of cosines
                 //inverse cos = (a*a)+ (b*b)- (c*c)   / (2*a*b)
-                float a = verticies[i + 1].position.x - currentPos.x;
-                float b = verticies[i + 1].position.y - currentPos.y;
-                float c = Mathf.Sqrt((a * a) + (b * b));
-                theta += Mathf.Acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / Mathf.PI);
+                float ax = (verticies[i].position.x - currentPos.x);
+                float ay = (verticies[i].position.y - currentPos.y);
+                float a = Mathf.Sqrt((ax * ax) + (ay * ay));
+                //print(ax + " + " + ay + " = " + a);
+
+                float bx = (verticies[i + 1].position.x - verticies[i].position.x);
+                float by = (verticies[i + 1].position.y - verticies[i].position.y);
+                float b = Mathf.Sqrt((bx * bx) + (by * by));
+                //print(bx + " + " + by + "=" + b);
+
+                //only works for right angles
+                //float c = Mathf.Sqrt((a * a) + (b * b));
+                float c = Mathf.Sqrt((ax + bx) * (ax + bx) + (ay + by) * (ay + by));
+                //print(c + " = " + Mathf.Sqrt(a * a) + " + " + Mathf.Sqrt(b * b));
+                theta = Mathf.Acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / Mathf.PI);
+                print(i + " - " + theta);
                 //you dont need to think you need to know
-                //print("angle " + i + " " + theta);
-                print("adj " + a + ", opp " + b + ", hyp "+c+", theta " + theta);
             }
 
             for (int j = 0; j < straightLength / spriteLength; j++)
