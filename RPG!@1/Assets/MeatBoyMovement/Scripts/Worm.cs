@@ -53,20 +53,25 @@ public class Worm : MonoBehaviour {
             yChangePer = (verticies[i].position.y - currentPos.y) / (straightLength / spriteLength);
 
 
+            if (i + 1 < verticies.Length)
+            {
 
 
+                //you dont need to think you need to know
 
-            //you dont need to think you need to know
+                //law of sins
+                //tan inverse equals
+                float adj = verticies[i + 1].position.x - currentPos.x;
+                float opp = verticies[i + 1].position.y - currentPos.y;
+                float thetaA = Mathf.Atan(opp / adj);
 
-            //law of sins
-            //tan inverse equals
-            float adj = verticies[i + 1].position.x - currentPos.x;
-            float opp = verticies[i + 1].position.y - currentPos.y;
-            float thetaA = Mathf.Atan(opp/adj);
-            print("adj "+adj+", opp "+opp+", theta "+rotDeg);
-
-
-            rotDeg += 90;
+                float hyp = Mathf.Sqrt(adj * adj + opp * opp);
+                //adj/thetaA = hyp/theta
+                //adj*sinhyp = hyp*sinadj
+                //invsintheta of hyp * sinthetaA / adj
+                rotDeg = Mathf.Asin((hyp * Mathf.Sin(thetaA)) / adj);
+                print("adj " + adj + ", opp " + opp + ", theta " + rotDeg);
+            }
 
             for (int j = 0; j < straightLength / spriteLength; j++)
             {
