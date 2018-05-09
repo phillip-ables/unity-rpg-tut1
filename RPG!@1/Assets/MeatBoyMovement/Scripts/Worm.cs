@@ -12,7 +12,7 @@ public class Worm : MonoBehaviour {
     private float delay = .1f;
 
 
-    private float rotDeg = 90;
+    private float theta; // i think theta should equal 0 @ initial
 
 
 
@@ -55,22 +55,15 @@ public class Worm : MonoBehaviour {
 
             if (i + 1 < verticies.Length)
             {
-
-
+                //law of cosines
+                //inverse cos = (a*a)+ (b*b)- (c*c)   / (2*a*b)
+                float a = verticies[i + 1].position.x - currentPos.x;
+                float b = verticies[i + 1].position.y - currentPos.y;
+                float c = Mathf.Sqrt((a * a) + (b * b));
+                theta += Mathf.Acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / Mathf.PI);
                 //you dont need to think you need to know
-
-                //law of sins
-                //tan inverse equals
-                float adj = verticies[i + 1].position.x - currentPos.x;
-                float opp = verticies[i + 1].position.y - currentPos.y;
-                float thetaA = Mathf.Atan(opp / adj);
-
-                float hyp = Mathf.Sqrt(adj * adj + opp * opp);
-                //adj/thetaA = hyp/theta
-                //adj*sinhyp = hyp*sinadj
-                //invsintheta of hyp * sinthetaA / adj
-                rotDeg = Mathf.Asin((hyp * Mathf.Sin(thetaA)) / adj);
-                print("adj " + adj + ", opp " + opp + ", theta " + rotDeg);
+                //print("angle " + i + " " + theta);
+                print("adj " + a + ", opp " + b + ", hyp "+c+", theta " + theta);
             }
 
             for (int j = 0; j < straightLength / spriteLength; j++)
@@ -99,7 +92,7 @@ public class Worm : MonoBehaviour {
                                 );
                 yield return new WaitForSeconds(delay);
             }
-            head.transform.rotation = Quaternion.Euler(0, 0, rotDeg);
+            head.transform.rotation = Quaternion.Euler(0, 0, theta);
         }
     }
 }
