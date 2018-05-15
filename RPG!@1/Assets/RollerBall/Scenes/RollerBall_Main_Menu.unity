@@ -853,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef5e01c2998571499ca316f49d535ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelButtonPrefab: {fileID: 1164562405576970, guid: e671fae1bd782664b891e60dd9ee6bf3,
+  levelButtonPrefab: {fileID: 1890890345364464, guid: e671fae1bd782664b891e60dd9ee6bf3,
     type: 2}
   levelButtonContainer: {fileID: 1405024771}
 --- !u!4 &1570322317
