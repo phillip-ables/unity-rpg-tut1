@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     public GameObject levelButtonPrefab;
@@ -17,12 +18,18 @@ public class MainMenu : MonoBehaviour {
             container.transform.SetParent(levelButtonContainer.transform, false);
 
             string sceneName = thumbnail.name;
-            container.GetComponent<Button>().onClick.AddListener (() => LoadLevel(sceneName);
+            container.GetComponent<Button>().onClick.AddListener (() => LoadLevel(sceneName));
         }
     }
 
     private void LoadLevel(string sceneName)
     {
-
+        SceneManager.LoadScene(sceneName);
     }
+
+    public void LookAtMenu(Transform menuTransform)
+    {
+        Camera.main.transform.LookAt(menuTransform.position);
+    }
+
 }
