@@ -15,6 +15,14 @@ public class MainMenu : MonoBehaviour {
             GameObject container = Instantiate(levelButtonPrefab) as GameObject;
             container.GetComponent<Image>().sprite = thumbnail;
             container.transform.SetParent(levelButtonContainer.transform, false);
+
+            string sceneName = thumbnail.name;
+            container.GetComponent<Button>().onClick.AddListener (() => LoadLevel(sceneName);
         }
+    }
+
+    private void LoadLevel(string sceneName)
+    {
+
     }
 }
