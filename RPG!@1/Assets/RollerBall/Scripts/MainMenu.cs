@@ -5,4 +5,6 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
     public GameObject levelButtonPrefab;
+    public GameObject levelButtonContainer;
+
 }
