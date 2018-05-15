@@ -10,5 +10,10 @@ public class MainMenu : MonoBehaviour {
     private void Start()
     {
         Sprite[] thumbnails = Resources.LoadAll<Sprite>("Levels");
+        foreach (Sprite thumbnail in thumbnails)
+        {
+            GameObject container = Instantiate(levelButtonPrefab) as GameObject;
+            container.GetComponent<Image>().sprite = thumbnail;
+        }
     }
 }

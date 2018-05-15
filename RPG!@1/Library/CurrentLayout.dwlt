@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 50
+  controlID: 96
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 64
+  controlID: 97
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -344,14 +344,14 @@ MonoBehaviour:
     height: 758
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 149.55610338461537
-  m_2DMode: 1
+  lastFramingTime: 82.7206637948718
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 141.54831, y: -79.3535, z: -8.973196}
+    m_Target: {x: 140, y: 250, z: 103}
     speed: 2
-    m_Value: {x: 141.54831, y: -79.3535, z: -8.973196}
+    m_Value: {x: 140, y: 250, z: 103}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -367,32 +367,32 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.08717229, y: -0.89959055, z: 0.21045254, w: 0.3726226}
   m_Size:
-    m_Target: 919.7457
+    m_Target: 444.27615
     speed: 2
-    m_Value: 919.7457
+    m_Value: 444.27615
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
+  m_ViewIsLockedToObject: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -516,9 +516,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7a2c0000
-    m_LastClickedID: 11386
-    m_ExpandedIDs: 96fbffff00000000542c0000902c0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 96fbffff00000000902c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -607,18 +607,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/RollerBall
+    - Assets/RollerBall/Resources/Levels
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/RollerBall
+  - Assets/RollerBall/Resources/Levels
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\phill\Desktop\code\unity-rpg-tut1\RPG!@1
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8c2a0000
-    m_LastClickedID: 10892
+    m_SelectedIDs: be2b0000
+    m_LastClickedID: 11198
     m_ExpandedIDs: 00000000b2290000d82900008c2a0000322b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
