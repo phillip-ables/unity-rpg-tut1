@@ -66,7 +66,6 @@ public class Worm : MonoBehaviour {
                 float by = (verticies[i + 1].position.y - verticies[i].position.y);
                 float b = Mathf.Sqrt((bx * bx) + (by * by));
                 //print(bx + " + " + by + "=" + b);
-
                 //only works for right angles
                 //float c = Mathf.Sqrt((a * a) + (b * b));
                 float c = Mathf.Sqrt((ax + bx) * (ax + bx) + (ay + by) * (ay + by));
