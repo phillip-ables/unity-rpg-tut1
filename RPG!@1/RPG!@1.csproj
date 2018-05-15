@@ -252,6 +252,7 @@
     <Compile Include="Assets\LaunchArc\LaunchArcRenderer.cs" />
     <Compile Include="Assets\MeatBoyMovement\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\MeatBoyMovement\Scripts\Worm.cs" />
+    <Compile Include="Assets\RollerBall\Scripts\MainMenu.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CameraSystem.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CharacterSelector.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CharacterSpawner.cs" />
