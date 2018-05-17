@@ -145,7 +145,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8b5a45bbe2415f44489f4abd479dab54, type: 2}
+  - {fileID: 2100000, guid: 5e9d033e6b943fe4089642653250bb6e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -191,11 +191,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 118137637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -206, y: 0, z: -50.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -191, y: -48.6, z: -45.6}
+  m_LocalScale: {x: 40.458622, y: 40.458603, z: 40.458603}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &371319805
 GameObject:
@@ -336,7 +336,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &446430777
 GameObject:
@@ -1255,6 +1255,7 @@ MonoBehaviour:
   levelButtonPrefab: {fileID: 1033195729020926, guid: 747b49ebfd27a1e4c9f7edee64a03248,
     type: 2}
   levelButtonContainer: {fileID: 1405024771}
+  playerMaterial: {fileID: 2100000, guid: 5e9d033e6b943fe4089642653250bb6e, type: 2}
 --- !u!4 &1570322317
 Transform:
   m_ObjectHideFlags: 0
