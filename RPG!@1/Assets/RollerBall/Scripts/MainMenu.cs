@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
     public GameObject levelButtonPrefab;
     public GameObject levelButtonContainer;
-    public int camSpeed;
+    private const float CAMERA_TRANSITION_SPEED = 3.0f;
 
     private Transform cameraTransform;
     private Transform cameraDesiredLook;
+    
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class MainMenu : MonoBehaviour {
     {
         if (cameraDesiredLook != null)
         {
-            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, cameraDesiredLook.rotation, camSpeed * Time.deltaTime);
+            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, cameraDesiredLook.rotation, CAMERA_TRANSITION_SPEED * Time.deltaTime);
         }
     }
 
