@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
+
+    public GameObject shopButtonPrefab;
+    public GameObject shopButtonContainer;
     public GameObject levelButtonPrefab;
     public GameObject levelButtonContainer;
     private const float CAMERA_TRANSITION_SPEED = 3.0f;
@@ -26,6 +29,14 @@ public class MainMenu : MonoBehaviour {
 
             string sceneName = thumbnail.name;
             container.GetComponent<Button>().onClick.AddListener (() => LoadLevel(sceneName));
+        }
+
+        Sprite[] textures = Resources.LoadAll<Sprite>("Players");
+        foreach (Sprite texture in textures)
+        {
+            GameObject container = Instantiate(shopButtonPrefab) as GameObject;
+            container.GetComponent<Image>().sprite = texture;
+            container.transform.SetParent(shopButtonContainer.transform, false);
         }
     }
 
