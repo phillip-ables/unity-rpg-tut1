@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour {
 
     private void Start()
     {
-        ChangePlayerSkin(12);
+        ChangePlayerSkin(0);
         cameraTransform = Camera.main.transform;
 
         Sprite[] thumbnails = Resources.LoadAll<Sprite>("Levels");
@@ -84,7 +84,7 @@ public class MainMenu : MonoBehaviour {
         else if (y == 0.75f)
             y = 0.25f;
 
-            playerMaterial.SetTextureOffset("_MainTex", new Vector2(x, y));
+        playerMaterial.SetTextureOffset("_MainTex", new Vector2(x, y));
     }
 
 }
