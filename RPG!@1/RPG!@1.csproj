@@ -255,6 +255,7 @@
     <Compile Include="Assets\RollerBall\Scripts\GameManager.cs" />
     <Compile Include="Assets\RollerBall\Scripts\LevelManager.cs" />
     <Compile Include="Assets\RollerBall\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\RollerBall\Scripts\Motor.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CameraSystem.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CharacterSelector.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CharacterSpawner.cs" />
