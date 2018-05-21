@@ -8,10 +8,13 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     private Image bgImg;
     private Image joystickImg;
 
+    public Vector3 InputDirection { set; get; }
+
     private void Start()
     {
         bgImg = GetComponent<Image>();
         joystickImg = GetComponentInChildren<Image>();
+        InputDirection = Vector3.zero;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -30,8 +33,9 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             //once we get that ratio we mutliply it by where that pivot point is
             float x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 + 1 : pos.x * 2 - 1;
             float y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 + 1 : pos.y * 2 - 1;
-        }
 
+            InputDirection = new Vector3(x, 0, y);
+        }
         //throw new System.NotImplementedException();
     }
 
