@@ -29,6 +29,7 @@ public class CameraMotor : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //this really helped with the frame rate
         desiredPosition = lookAt.position + offset;
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
         transform.LookAt(lookAt.position + Vector3.up);
