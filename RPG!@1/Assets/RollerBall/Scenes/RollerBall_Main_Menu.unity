@@ -1299,6 +1299,7 @@ MonoBehaviour:
   levelButtonPrefab: {fileID: 1033195729020926, guid: 747b49ebfd27a1e4c9f7edee64a03248,
     type: 2}
   levelButtonContainer: {fileID: 1405024771}
+  currencyText: {fileID: 1945315573}
   playerMaterial: {fileID: 2100000, guid: 5e9d033e6b943fe4089642653250bb6e, type: 2}
 --- !u!4 &1570322317
 Transform:

@@ -102,6 +102,7 @@ public class MainMenu : MonoBehaviour {
             {
                 GameManager.Instance.currency -= cost;
                 GameManager.Instance.skinAvailability += 1 << index;
+                GameManager.Instance.Save();
             }
         }
     }
