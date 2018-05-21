@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
     public GameObject pauseMenu;
+    public GameObject pauseButton;
 
     public void Start()
     {
@@ -13,6 +14,7 @@ public class LevelManager : MonoBehaviour {
 
     public void TogglePauseMenu()
     {
+        pauseButton.SetActive(!pauseButton.activeSelf);
         pauseMenu.SetActive(!pauseMenu.activeSelf);
     }
 
