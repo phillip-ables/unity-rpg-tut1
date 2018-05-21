@@ -9,5 +9,10 @@ public class Motor : MonoBehaviour {
 
     private Rigidbody controller;
 
-
+    private void Start()
+    {
+        controller = GetComponent<Rigidbody>();
+        controller.maxAngularVelocity = terminalRotationSpeed;
+        controller.drag = drag;
+    }
 }
