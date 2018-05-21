@@ -8,5 +8,14 @@ public class CameraMotor : MonoBehaviour {
     private Vector3 offset;
     private float distance = 5.0f;
     private float yOffset = 3.5f;
-    
+
+    private void Start()
+    {
+        offset = new Vector3(0, yOffset, -1 * distance);
+    }
+
+    private void Update()
+    {
+        transform.position = lookAt.position + offset;
+    }
 }
