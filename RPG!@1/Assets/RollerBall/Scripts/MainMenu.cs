@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour {
 
     private void Start()
     {
-        ChangePlayerSkin(0);
+        ChangePlayerSkin(GameManager.Instance.currentSkinIndex);
         cameraTransform = Camera.main.transform;
 
         Sprite[] thumbnails = Resources.LoadAll<Sprite>("Levels");
@@ -85,6 +85,9 @@ public class MainMenu : MonoBehaviour {
             y = 0.25f;
 
         playerMaterial.SetTextureOffset("_MainTex", new Vector2(x, y));
+        
+        GameManager.Instance.currentSkinIndex = index;
+        GameManager.Instance.Save();
     }
 
 }

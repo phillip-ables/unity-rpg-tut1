@@ -137,9 +137,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 36604464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 799cfa16bbc98b1468cec5549581497a, type: 3}
+  m_Script: {fileID: 11500000, guid: 98e6fc4ad3bbcd242a52a9b2f10711ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSkinIndex: 0
+  currency: 0
+  skinAvailability: 1
 --- !u!4 &36604466
 Transform:
   m_ObjectHideFlags: 0
