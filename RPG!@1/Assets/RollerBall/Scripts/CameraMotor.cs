@@ -6,7 +6,10 @@ public class CameraMotor : MonoBehaviour
 {
     public Transform lookAt;
 
+    private Vector3 desiredPosition;
     private Vector3 offset;
+
+    private float smoothSpeed = 7.5f;
     private float distance = 8.0f;
     private float yOffset = 3.5f;
 
