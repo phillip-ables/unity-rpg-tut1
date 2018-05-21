@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour {
     public GameObject shopButtonContainer;
     public GameObject levelButtonPrefab;
     public GameObject levelButtonContainer;
+    public Text currencyText;
 
     public Material playerMaterial;
 
@@ -22,6 +23,7 @@ public class MainMenu : MonoBehaviour {
     private void Start()
     {
         ChangePlayerSkin(GameManager.Instance.currentSkinIndex);
+        currencyText.text = "Currency : " + GameManager.Instance.currency.ToString;
         cameraTransform = Camera.main.transform;
 
         Sprite[] thumbnails = Resources.LoadAll<Sprite>("Levels");
