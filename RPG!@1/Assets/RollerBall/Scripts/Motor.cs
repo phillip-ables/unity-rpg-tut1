@@ -15,4 +15,17 @@ public class Motor : MonoBehaviour {
         controller.maxAngularVelocity = terminalRotationSpeed;
         controller.drag = drag;
     }
+
+    private void Update()
+    {
+        Vector3 dir = Vector3.zero;
+
+        dir.x = Input.GetAxis("Horizontal");
+        dir.z = Input.GetAxis("Vertical");
+
+        if (dir.magnitude > 1)
+            dir.Normalize();
+
+        controller.AddForce(dir * moveSpeed);
+    }
 }
