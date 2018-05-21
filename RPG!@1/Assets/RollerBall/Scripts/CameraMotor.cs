@@ -25,8 +25,13 @@ public class CameraMotor : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.RightArrow))
             SlideCamera(false);
 
-        transform.position = lookAt.position + offset;
-        transform.LookAt(lookAt);
+    }
+
+    private void FixedUpdate()
+    {
+        desiredPosition = lookAt.position + offset;
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+        transform.LookAt(lookAt.position + Vector3.up);
     }
 
     public void SlideCamera(bool left)
