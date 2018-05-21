@@ -49,6 +49,12 @@ public class MainMenu : MonoBehaviour {
             int index = textureIndex;
 
             container.GetComponent<Button>().onClick.AddListener(() => ChangePlayerSkin(index));
+
+            if ((GameManager.Instance.skinAvailability & 1 << index) == 1 << index)
+            {
+                container.transform.GetChild(0).gameObject.SetActive(false);
+            }
+
             textureIndex++;
         }
     }
