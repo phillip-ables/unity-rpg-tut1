@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour {
     private void Start()
     {
         ChangePlayerSkin(GameManager.Instance.currentSkinIndex);
-        currencyText.text = "Currency : " + GameManager.Instance.currency.ToString;
+        currencyText.text = "Currency : " + GameManager.Instance.currency.ToString();
         cameraTransform = Camera.main.transform;
 
         Sprite[] thumbnails = Resources.LoadAll<Sprite>("Levels");
@@ -74,22 +74,36 @@ public class MainMenu : MonoBehaviour {
 
     private void ChangePlayerSkin(int index)
     {
-        float x = (index % 4) * 0.25f;
-        float y = ((int)index / 4) * 0.25f;
+        if ((GameManager.Instance.skinAvailability & 1 << index) == 1 << index)
+        {
+            float x = (index % 4) * 0.25f;
+            float y = ((int)index / 4) * 0.25f;
 
-        if (y == 0.0f)
-            y = .75f;
-        else if (y == 0.25f)
-            y = .5f;
-        else if (y == .5f)
-            y = .25f;
-        else if (y == 0.75f)
-            y = 0.25f;
+            if (y == 0.0f)
+                y = .75f;
+            else if (y == 0.25f)
+                y = .5f;
+            else if (y == .5f)
+                y = .25f;
+            else if (y == 0.75f)
+                y = 0.25f;
 
-        playerMaterial.SetTextureOffset("_MainTex", new Vector2(x, y));
-        
-        GameManager.Instance.currentSkinIndex = index;
-        GameManager.Instance.Save();
+            playerMaterial.SetTextureOffset("_MainTex", new Vector2(x, y));
+
+            GameManager.Instance.currentSkinIndex = index;
+            GameManager.Instance.Save();
+        }
+        else
+        {
+            //you do not have the skin, do you want to buy it?
+            int cost = 0;
+
+            if(GameManager.Instance.currency <= cost)
+            {
+                GameManager.Instance.currency -= cost;
+                GameManager.Instance.skinAvailability += 1 << index;
+            }
+        }
     }
 
 }
