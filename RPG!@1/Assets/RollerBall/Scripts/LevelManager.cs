@@ -12,6 +12,6 @@ public class LevelManager : MonoBehaviour {
 
     public void ToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("RollerBall_Main_Menu");
     }
 }
