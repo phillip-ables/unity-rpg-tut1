@@ -16,4 +16,9 @@ public class FreeCamera : MonoBehaviour {
         currentX += cameraJoystick.InputDirection.x * sensitivityX;
         currentY += cameraJoystick.InputDirection.z * sensitivityY;
     }
+
+    private void LateUpdate()
+    {
+        
+    }
 }
