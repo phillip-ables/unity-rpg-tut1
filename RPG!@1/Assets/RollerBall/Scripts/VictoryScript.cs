@@ -7,8 +7,7 @@ public class VictoryScript : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            Debug.Log("PLayer has entered");
-            //Victory
+            LevelManager.Instance.Victory();
         }
     }
     

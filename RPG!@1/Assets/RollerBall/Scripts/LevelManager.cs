@@ -26,4 +26,9 @@ public class LevelManager : MonoBehaviour {
     {
         SceneManager.LoadScene("RollerBall_Main_Menu");
     }
+
+    public void Victory()
+    {
+        Debug.Log("VICTORY");
+    }
 }
