@@ -46,11 +46,14 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        OnDrag(eventData);
+        //throw new System.NotImplementedException();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        InputDirection = Vector3.zero;
+        joystickImg.rectTransform.anchoredPosition = Vector3.zero;
+        //throw new System.NotImplementedException();
     }
 }
