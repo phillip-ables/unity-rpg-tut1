@@ -7,12 +7,18 @@ public class Motor : MonoBehaviour {
     public float drag = 0.5f;
     public float terminalRotationSpeed = 25.0f;
 
+    public float boostSpeed = 5.0f;
+    public float boostCooldown = 2.0f;
+    public float lastBoost;
+
     public VirtualJoystick moveJoystick;
     private Rigidbody controller;
     private Transform camTransform;
 
     private void Start()
     {
+        lastBoost = Time.deltaTime - boostCooldown;
+
         controller = GetComponent<Rigidbody>();
         controller.maxAngularVelocity = terminalRotationSpeed;
         controller.drag = drag;

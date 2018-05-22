@@ -10,8 +10,8 @@ public class FreeCamera : MonoBehaviour {
     private float distance = 10.0f;
     private float currentX = 0.0f;
     private float currentY = 0.0f;
-    private float sensitivityX = 0.0f;
-    private float sensitivityY = 0.0f;
+    private float sensitivityX = 3.0f;
+    private float sensitivityY = 1.0f;
 
     private void Update()
     {
@@ -24,5 +24,6 @@ public class FreeCamera : MonoBehaviour {
         Vector3 dir = new Vector3(0, 0, -distance);
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
         transform.position = lookAt.position + rotation * dir;
+        transform.LookAt(lookAt);
     }
 }
