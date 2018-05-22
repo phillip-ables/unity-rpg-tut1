@@ -701,7 +701,6 @@ GameObject:
   - component: {fileID: 1080996276}
   - component: {fileID: 1080996279}
   - component: {fileID: 1080996278}
-  - component: {fileID: 1080996277}
   m_Layer: 5
   m_Name: Container_CameraJoystick
   m_TagString: Untagged
@@ -728,17 +727,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1080996277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1080996275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe19c69b7e90e74ebe91c2f008afbd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1080996278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,6 +919,7 @@ GameObject:
   - component: {fileID: 1384823317}
   - component: {fileID: 1384823316}
   - component: {fileID: 1384823320}
+  - component: {fileID: 1384823321}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1012,6 +1001,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfd811fdf0b6e5b49a17a1f53a2404d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookAt: {fileID: 1112934895}
+--- !u!114 &1384823321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384823315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe19c69b7e90e74ebe91c2f008afbd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraJoystick: {fileID: 542125997}
   lookAt: {fileID: 1112934895}
 --- !u!1 &1402016462
 GameObject:
