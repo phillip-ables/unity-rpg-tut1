@@ -10,6 +10,10 @@ public class LevelManager : MonoBehaviour {
     public GameObject pauseMenu;
     public GameObject pauseButton;
 
+    private float startTime;
+    public float silverTime;
+    public float goldTime;
+
     public void Start()
     {
         instance = this;
