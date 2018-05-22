@@ -49,5 +49,8 @@ public class Motor : MonoBehaviour {
         controller.AddForce(rotatedDir * moveSpeed);
     }
 
-
+    public void Boost()
+    {
+        controller.AddForce(controller.velocity.normalized * boostSpeed, ForceMode.VelocityChange);
+    }
 }
