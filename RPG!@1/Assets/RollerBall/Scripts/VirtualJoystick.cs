@@ -13,7 +13,7 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     private void Start()
     {
         bgImg = GetComponent<Image>();
-        joystickImg = GetComponentInChildren<Image>();
+        joystickImg = transform.GetChild(0).GetComponent<Image>();
         InputDirection = Vector3.zero;
     }
 
@@ -35,6 +35,11 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             float y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 + 1 : pos.y * 2 - 1;
 
             InputDirection = new Vector3(x, 0, y);
+            InputDirection = (InputDirection.magnitude > 1) ? InputDirection.normalized : InputDirection;
+
+            joystickImg.rectTransform.anchoredPosition =
+                new Vector3(InputDirection.x * (bgImg.rectTransform.sizeDelta.x / 3),
+                    InputDirection.z * (bgImg.rectTransform.sizeDelta.y / 3));
         }
         //throw new System.NotImplementedException();
     }
