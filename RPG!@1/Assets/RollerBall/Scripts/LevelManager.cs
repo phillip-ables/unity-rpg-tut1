@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour {
     {
         instance = this;
         pauseMenu.SetActive(false);
+        startTime = Time.time; //keep time stamp
     }
 
     public void TogglePauseMenu()
@@ -33,6 +34,15 @@ public class LevelManager : MonoBehaviour {
 
     public void Victory()
     {
-        Debug.Log("VICTORY");
+        float duration = Time.time - startTime;
+
+        if (duration < goldTime)
+        {
+            GameManager.Instance.currency += 50;
+        }
+        else if (duration < silverTime)
+            GameManager.Instance.currency += 25;
+        else
+            GameManager.Instance.currency += 5;
     }
 }
