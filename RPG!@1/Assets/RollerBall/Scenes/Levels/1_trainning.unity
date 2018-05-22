@@ -1750,8 +1750,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1914179718}
-        m_MethodName: TogglePauseMenu
+      - m_Target: {fileID: 1112934890}
+        m_MethodName: Boost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
