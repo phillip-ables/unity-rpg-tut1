@@ -44,5 +44,16 @@ public class LevelManager : MonoBehaviour {
             GameManager.Instance.currency += 25;
         else
             GameManager.Instance.currency += 5;
+
+        GameManager.Instance.Save();
+
+        string saveString = ""; // "30&60&45"
+        saveString += duration.ToString();
+        saveString += '&';
+        saveString += silverTime.ToString();
+        saveString += '&';
+        saveString += goldTime.ToString();
+
+        PlayerPrefs.SetString(SceneManager.GetActiveScene().name, saveString);
     }
 }
