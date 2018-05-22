@@ -1695,6 +1695,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 730707549}
   pauseButton: {fileID: 496013496}
+  silverTime: 20
+  goldTime: 15
 --- !u!4 &1914179719
 Transform:
   m_ObjectHideFlags: 0

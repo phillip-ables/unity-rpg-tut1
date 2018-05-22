@@ -55,5 +55,7 @@ public class LevelManager : MonoBehaviour {
         saveString += goldTime.ToString();
 
         PlayerPrefs.SetString(SceneManager.GetActiveScene().name, saveString);
+
+        SceneManager.LoadScene("RollerBall_Main_Menu");
     }
 }
