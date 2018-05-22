@@ -253,6 +253,7 @@
     <Compile Include="Assets\MeatBoyMovement\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\MeatBoyMovement\Scripts\Worm.cs" />
     <Compile Include="Assets\RollerBall\Scripts\CameraMotor.cs" />
+    <Compile Include="Assets\RollerBall\Scripts\FreeCamera.cs" />
     <Compile Include="Assets\RollerBall\Scripts\GameManager.cs" />
     <Compile Include="Assets\RollerBall\Scripts\LevelManager.cs" />
     <Compile Include="Assets\RollerBall\Scripts\MainMenu.cs" />
