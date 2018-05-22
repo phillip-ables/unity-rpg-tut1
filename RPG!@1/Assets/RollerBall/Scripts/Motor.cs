@@ -7,6 +7,7 @@ public class Motor : MonoBehaviour {
     public float drag = 0.5f;
     public float terminalRotationSpeed = 25.0f;
 
+    public VirtualJoystick moveJoystick;
     private Rigidbody controller;
     private Transform camTransform;
 
@@ -28,6 +29,11 @@ public class Motor : MonoBehaviour {
 
         if (dir.magnitude > 1)
             dir.Normalize();
+
+        if(moveJoystick.InputDirection != Vector3.zero)
+        {
+            dir = moveJoystick.InputDirection;
+        }
 
         // Rotate our direction vector with the camera
         Vector3 rotatedDir = camTransform.TransformDirection(dir);
