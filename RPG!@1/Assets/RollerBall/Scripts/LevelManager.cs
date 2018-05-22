@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
+    private static LevelManager instance;
+    public static LevelManager Instance { get { return instance; } }
+
     public GameObject pauseMenu;
     public GameObject pauseButton;
 
     public void Start()
     {
+        instance = this;
         pauseMenu.SetActive(false);
     }
 
