@@ -48,4 +48,6 @@ public class Motor : MonoBehaviour {
 
         controller.AddForce(rotatedDir * moveSpeed);
     }
+
+
 }
