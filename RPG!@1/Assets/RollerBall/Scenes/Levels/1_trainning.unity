@@ -709,6 +709,7 @@ MonoBehaviour:
   moveSpeed: 5
   drag: 0.5
   terminalRotationSpeed: 25
+  moveJoystick: {fileID: 542125997}
 --- !u!4 &1112934895 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4464784561488368, guid: f207a54b7ba2fd04ba8bd6c300022ab0,
