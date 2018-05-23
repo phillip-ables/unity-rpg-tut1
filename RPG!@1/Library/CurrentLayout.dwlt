@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 3992
+  controlID: 465
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 4143
+  controlID: 466
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -345,14 +345,14 @@ MonoBehaviour:
     height: 758
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1545.1218941538461
+  lastFramingTime: 91.21857969230769
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: -29, z: 116}
+    m_Target: {x: 0, y: -30.45, z: 189.1}
     speed: 2
-    m_Value: {x: 0, y: -29, z: 116}
+    m_Value: {x: 0, y: -30.45, z: 189.1}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -380,9 +380,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.08717229, y: -0.89959055, z: 0.21045254, w: 0.3726226}
   m_Size:
-    m_Target: 2.8578837
+    m_Target: 116.67262
     speed: 2
-    m_Value: 2.8578837
+    m_Value: 116.67262
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
+  m_ViewIsLockedToObject: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee1dffff
-    m_LastClickedID: -57874
-    m_ExpandedIDs: ee1dffff28f5ffff96fbffff00000000
+    m_SelectedIDs: a22c0000
+    m_LastClickedID: 11426
+    m_ExpandedIDs: 96fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,19 +652,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/RollerBall/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/RollerBall/Prefabs
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\phill\Desktop\code\unity-rpg-tut1\RPG!@1
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc2a0000
-    m_LastClickedID: 10956
-    m_ExpandedIDs: 00000000c4290000ec290000682a0000a62a0000562b00008e2b000000ca9a3bffffff7f
+    m_SelectedIDs: bc290000
+    m_LastClickedID: 10684
+    m_ExpandedIDs: 00000000bc290000e4290000602a00009e2a00004e2b0000862b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -692,7 +692,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4290000ec290000682a0000a62a0000562b00008e2b000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000bc290000e4290000602a00009e2a00004e2b0000862b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
