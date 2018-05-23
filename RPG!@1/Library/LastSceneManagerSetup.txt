@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/RollerBall/Scenes/Levels/1_trainning.unity
+- path: Assets/RollerBall/Scenes/RollerBall_Main_Menu.unity
   isLoaded: 1
   isActive: 1

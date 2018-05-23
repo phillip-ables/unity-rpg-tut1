@@ -16,14 +16,12 @@ public class MainMenu : MonoBehaviour {
     public Material playerMaterial;
 
     private Transform cameraTransform;
-    private Transform cameraDesiredLook;
-
-    
+    private Transform cameraDesiredLook;    
 
     private void Start()
     {
         //whipe your whole saved game
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
 
         ChangePlayerSkin(GameManager.Instance.currentSkinIndex);
         currencyText.text = "Currency : " + GameManager.Instance.currency.ToString();
@@ -107,7 +105,7 @@ public class MainMenu : MonoBehaviour {
             //you do not have the skin, do you want to buy it?
             int cost = 100;
 
-            if(GameManager.Instance.currency <= cost)
+            if(GameManager.Instance.currency >= cost)
             {
                 GameManager.Instance.currency -= cost;
                 GameManager.Instance.skinAvailability += 1 << index;
