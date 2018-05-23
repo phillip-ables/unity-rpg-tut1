@@ -51,7 +51,10 @@ public class Motor : MonoBehaviour {
 
     public void Boost()
     {
-        if(Time.time - lastBoost > boostCooldown) 
+        if(Time.time - lastBoost > boostCooldown)
+        {
+            lastBoost = Time.time;
             controller.AddForce(controller.velocity.normalized * boostSpeed, ForceMode.VelocityChange);
+        }
     }
 }
