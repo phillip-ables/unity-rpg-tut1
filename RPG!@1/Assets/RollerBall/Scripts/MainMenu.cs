@@ -32,6 +32,7 @@ public class MainMenu : MonoBehaviour {
                             300,300,300,300,
                             500,500,500,500,
                             1000,1250,1500,2000};
+    private bool nextLevelLocked = false;
 
     public GameObject shopButtonPrefab;
     public GameObject shopButtonContainer;
@@ -62,6 +63,10 @@ public class MainMenu : MonoBehaviour {
 
             LevelData level = new LevelData(thumbnail.name);
             container.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = (level.BestTime != 0.0f) ? level.BestTime.ToString("f") : "";
+
+
+            if (level.BestTime == 0.0f)
+                nextLevelLocked = true;
 
             string sceneName = thumbnail.name;
             container.GetComponent<Button>().onClick.AddListener (() => LoadLevel(sceneName));
