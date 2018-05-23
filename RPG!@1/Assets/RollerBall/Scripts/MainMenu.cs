@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     private const float CAMERA_TRANSITION_SPEED = 3.0f;
+    private int[] costs = {0,150,150,150,
+                            300,300,300,300,
+                            500,500,500,500,
+                            1000,1250,1500,2000};
 
     public GameObject shopButtonPrefab;
     public GameObject shopButtonContainer;
@@ -103,7 +107,7 @@ public class MainMenu : MonoBehaviour {
         else
         {
             //you do not have the skin, do you want to buy it?
-            int cost = 100;
+            
 
             if(GameManager.Instance.currency >= cost)
             {
