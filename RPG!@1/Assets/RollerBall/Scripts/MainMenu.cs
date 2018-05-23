@@ -59,7 +59,9 @@ public class MainMenu : MonoBehaviour {
             GameObject container = Instantiate(levelButtonPrefab) as GameObject;
             container.GetComponent<Image>().sprite = thumbnail;
             container.transform.SetParent(levelButtonContainer.transform, false);
-            container.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "EMpty";
+
+            LevelData level = new LevelData(thumbnail.name);
+            container.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = level.BestTime.ToString("f");
 
             string sceneName = thumbnail.name;
             container.GetComponent<Button>().onClick.AddListener (() => LoadLevel(sceneName));
