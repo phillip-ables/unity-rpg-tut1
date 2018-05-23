@@ -37,9 +37,7 @@ public class LevelManager : MonoBehaviour {
         float duration = Time.time - startTime;
 
         if (duration < goldTime)
-        {
             GameManager.Instance.currency += 50;
-        }
         else if (duration < silverTime)
             GameManager.Instance.currency += 25;
         else
@@ -48,7 +46,10 @@ public class LevelManager : MonoBehaviour {
         GameManager.Instance.Save();
 
         string saveString = ""; // "30&60&45"
-        saveString += duration.ToString();
+
+        LevelData level = new LevelData(SceneManager.GetActiveScene().name);
+
+        saveString += (level.BestTime > duration) ? duration.ToString() : level.BestTime.ToString();
         saveString += '&';
         saveString += silverTime.ToString();
         saveString += '&';
