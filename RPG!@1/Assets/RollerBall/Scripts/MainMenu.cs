@@ -64,6 +64,7 @@ public class MainMenu : MonoBehaviour {
             LevelData level = new LevelData(thumbnail.name);
             container.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = (level.BestTime != 0.0f) ? level.BestTime.ToString("f") : "";
 
+            container.transform.GetChild(1).GetComponent<Image>().enabled = nextLevelLocked;
 
             if (level.BestTime == 0.0f)
                 nextLevelLocked = true;
