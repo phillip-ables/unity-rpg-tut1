@@ -7,9 +7,16 @@ using UnityEngine.SceneManagement;
 //Level Data Structure
 public class LevelData
 {
-    public float BestTime { set; get; };
-    public float GoldTime { set; get; };
-    public float SilverTime { set; get; };
+    public LevelData(string levelName)
+    {
+        //pass the string -> fill the values;
+        string data = PlayerPrefs.GetString(levelName);
+
+    }
+
+    public float BestTime { set; get; }
+    public float GoldTime { set; get; }
+    public float SilverTime { set; get; }
 }
 
 
