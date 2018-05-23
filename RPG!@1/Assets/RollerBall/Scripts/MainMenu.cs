@@ -4,6 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//Level Data Structure
+public class LevelData
+{
+    public float BestTime { set; get; };
+    public float GoldTime { set; get; };
+    public float SilverTime { set; get; };
+}
+
+
 public class MainMenu : MonoBehaviour {
     private const float CAMERA_TRANSITION_SPEED = 3.0f;
     private int[] costs = {0,150,150,150,
