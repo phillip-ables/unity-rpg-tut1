@@ -11,6 +11,12 @@ public class LevelData
     {
         //pass the string -> fill the values;
         string data = PlayerPrefs.GetString(levelName);
+        if (data == "")//fail safe
+            return;
+        string[] allData = data.Split('&');
+        BestTime = float.Parse(allData[0]);
+        SilverTime = float.Parse(allData[1]);
+        GoldTime = float.Parse(allData[2]);
 
     }
 
