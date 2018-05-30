@@ -259,6 +259,7 @@
     <Compile Include="Assets\RollerBall\Scripts\LevelManager.cs" />
     <Compile Include="Assets\RollerBall\Scripts\MainMenu.cs" />
     <Compile Include="Assets\RollerBall\Scripts\Motor.cs" />
+    <Compile Include="Assets\RollerBall\Scripts\SwitchObject.cs" />
     <Compile Include="Assets\RollerBall\Scripts\VictoryScript.cs" />
     <Compile Include="Assets\RollerBall\Scripts\VirtualJoystick.cs" />
     <Compile Include="Assets\SuperPlatFormBrothers\Scripts\CameraSystem.cs" />

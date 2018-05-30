@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyableObject : MonoBehaviour {
-    public float forceRequired = 10.5f;
+    public float forceRequired;
 
     private void OnCollisionEnter(Collision collision)
     {
