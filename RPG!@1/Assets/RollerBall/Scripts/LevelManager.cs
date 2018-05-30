@@ -25,6 +25,18 @@ public class LevelManager : MonoBehaviour {
         player.transform.position = respawnPoint.position;
     }
 
+    private void Update()
+    {
+        //this is where we kill the player
+
+
+
+
+        if (player.transform.position.y < -11.0f)
+            Death();
+
+    }
+
     public void TogglePauseMenu()
     {
         pauseButton.SetActive(!pauseButton.activeSelf);
@@ -62,5 +74,13 @@ public class LevelManager : MonoBehaviour {
         PlayerPrefs.SetString(SceneManager.GetActiveScene().name, saveString);
 
         SceneManager.LoadScene("RollerBall_Main_Menu");
+    }
+
+    public void Death()
+    {
+        player.transform.position = respawnPoint.position;
+        Rigidbody rigid = player.GetComponent<Rigidbody>();
+        rigid.velocity = Vector3.zero;
+        rigid.angularVelocity = Vector3.zero;
     }
 }
