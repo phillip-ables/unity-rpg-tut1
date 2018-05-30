@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour {
 
     public GameObject pauseMenu;
     public GameObject pauseButton;
+    public Transform respawnPoint;
+    private GameObject player;
 
     private float startTime;
     public float silverTime;
@@ -19,6 +21,8 @@ public class LevelManager : MonoBehaviour {
         instance = this;
         pauseMenu.SetActive(false);
         startTime = Time.time; //keep time stamp
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = respawnPoint.position;
     }
 
     public void TogglePauseMenu()

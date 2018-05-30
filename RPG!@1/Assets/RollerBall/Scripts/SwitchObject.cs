@@ -7,6 +7,7 @@ public class SwitchObject : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(target);
+        if(target != null)
+            Destroy(target.gameObject);
     }
 }
