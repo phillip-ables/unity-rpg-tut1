@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1368
     height: 779
-  m_MinSize: {x: 683, y: 342}
-  m_MaxSize: {x: 12008, y: 8042}
+  m_MinSize: {x: 709, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
   vertical: 0
-  controlID: 1011
+  controlID: 1839
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,14 +158,14 @@ MonoBehaviour:
     height: 758
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 91.21857969230769
-  m_2DMode: 1
+  lastFramingTime: 5197.908221463156
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: -30.45, z: 189.1}
+    m_Target: {x: 0, y: -29, z: 111.06}
     speed: 2
-    m_Value: {x: 0, y: -30.45, z: 189.1}
+    m_Value: {x: 0, y: -29, z: 111.06}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -181,25 +181,25 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.3879158, y: 0.6083791, z: -0.53070474, w: -0.4447003}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.38791394, y: 0.6083762, z: -0.53070223, w: -0.44469818}
   m_Size:
-    m_Target: 116.67262
+    m_Target: 22.726522
     speed: 2
-    m_Value: 116.67262
+    m_Value: 22.726522
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
@@ -365,10 +365,10 @@ MonoBehaviour:
     y: 0
     width: 393
     height: 779
-  m_MinSize: {x: 204, y: 342}
-  m_MaxSize: {x: 4004, y: 8042}
+  m_MinSize: {x: 230, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 871
+  controlID: 1797
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -423,9 +423,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b22c0000
-    m_LastClickedID: 11442
-    m_ExpandedIDs: 96fbffff00000000
+    m_SelectedIDs: 282d0000
+    m_LastClickedID: 11560
+    m_ExpandedIDs: f07bffff96fbffff00000000b02c0000ba2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -466,14 +466,14 @@ MonoBehaviour:
     y: 305
     width: 393
     height: 474
-  m_MinSize: {x: 104, y: 121}
-  m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -540,19 +540,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/RollerBall/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/RollerBall/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\phill\Desktop\code\unity-rpg-tut1\RPG!@1
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c2290000
-    m_LastClickedID: 10690
-    m_ExpandedIDs: 00000000c2290000ea290000662a0000a42a0000542b00008c2b000000ca9a3bffffff7f
+    m_SelectedIDs: 262b0000
+    m_LastClickedID: 11046
+    m_ExpandedIDs: 00000000be290000e6290000642a0000a22a0000562b00008e2b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -580,7 +580,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c2290000ea290000662a0000a42a0000542b00008c2b000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000be290000e6290000642a0000a22a0000562b00008e2b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -605,8 +605,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b22c0000
-    m_LastClickedInstanceID: 11442
+    m_SelectedInstanceIDs: 282d0000
+    m_LastClickedInstanceID: 11560
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: b4270000522b00003e2a0000582a0000642c0000502a0000562a0000cc2c0000862c0000702d0000bc2d00003e2b0000762a0000562c000000000000
     m_RenameOverlay:
