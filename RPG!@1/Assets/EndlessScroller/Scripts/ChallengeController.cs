@@ -7,6 +7,7 @@ public class ChallengeController : MonoBehaviour {
     public GameObject[] challenges;
     public float frequency = 0.5f;
     float counter = 0.0f;
+    public Transform challengesSpawnPoint;
 
     private void Start()
     {
@@ -37,6 +38,7 @@ public class ChallengeController : MonoBehaviour {
 
     void GenerateRandomChallenge()
     {
-
+        Instantiate(challenges[Random.Range(0,challenges.Length)], challengesSpawnPoint.position, Quaternion.identity);
+        counter = 1.0f;
     }
 }
