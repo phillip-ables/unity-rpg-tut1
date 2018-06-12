@@ -17,6 +17,14 @@ public class ChallengeController : MonoBehaviour {
     private void Update()
     {
         //Generating
+        if(counter <= 0.0f)
+        {
+            GenerateRandomChallenge();
+        }
+        else
+        {
+            counter -= Time.deltaTime * frequency;
+        }
 
         //Scrolling
         GameObject currentChild;
