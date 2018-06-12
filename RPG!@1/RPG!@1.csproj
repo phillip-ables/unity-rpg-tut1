@@ -248,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CoRoutines\Test.cs" />
+    <Compile Include="Assets\EndlessScroller\Scripts\ChallengeScroller.cs" />
     <Compile Include="Assets\EndlessScroller\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\LaunchArc\LaunchArcMesh.cs" />
     <Compile Include="Assets\LaunchArc\LaunchArcRenderer.cs" />
