@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1368
     height: 779
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 709, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
   vertical: 0
-  controlID: 117
+  controlID: 382
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -365,10 +365,10 @@ MonoBehaviour:
     y: 0
     width: 393
     height: 779
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 230, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 67
+  controlID: 383
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -423,8 +423,8 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f22c0000
-    m_LastClickedID: 11506
+    m_SelectedIDs: f82c0000
+    m_LastClickedID: 11512
     m_ExpandedIDs: 96fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -466,8 +466,8 @@ MonoBehaviour:
     y: 305
     width: 393
     height: 474
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
@@ -540,19 +540,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/EndlessScroller/Artwork
+    - Assets/EndlessScroller/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/EndlessScroller/Artwork
+  - Assets/EndlessScroller/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\phill\Desktop\code\unity-rpg-tut1\RPG!@1
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e2c0000
-    m_LastClickedID: 11406
-    m_ExpandedIDs: 00000000c0290000e8290000222a00007a2a0000b82a0000782b0000b02b000000ca9a3bffffff7f
+    m_SelectedIDs: 082a0000
+    m_LastClickedID: 10760
+    m_ExpandedIDs: 00000000c6290000ee290000282a0000802a0000be2a00007e2b0000b62b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -580,7 +580,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c0290000e8290000222a00007a2a0000b82a0000782b0000b02b0000
+    m_ExpandedIDs: 00000000c6290000ee290000282a0000802a0000be2a00007e2b0000b62b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -605,8 +605,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f22c0000
-    m_LastClickedInstanceID: 11506
+    m_SelectedInstanceIDs: f82c0000
+    m_LastClickedInstanceID: 11512
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: b4270000522b00003e2a0000582a0000642c0000502a0000562a0000cc2c0000862c0000702d0000bc2d00003e2b0000762a0000562c000000000000e62b00007e2c0000
     m_RenameOverlay:
@@ -688,7 +688,7 @@ MonoBehaviour:
     width: 397
     height: 758
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 142.95508}
+  m_ScrollPosition: {x: 0, y: 199.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: -160
