@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/EndlessScroller/Main.unity
+- path: Assets/EndlessScroller/Scenes/EndlessMain.unity
   isLoaded: 1
   isActive: 1
