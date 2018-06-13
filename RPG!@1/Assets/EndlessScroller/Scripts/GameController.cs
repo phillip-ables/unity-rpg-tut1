@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     public GameObject gameOverPanel;
 
-    void GameOver()
+    public void GameOver()
     {
         Invoke("ShowOverPanel", 2.0f);
     }
