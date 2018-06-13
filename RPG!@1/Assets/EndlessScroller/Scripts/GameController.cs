@@ -15,4 +15,9 @@ public class GameController : MonoBehaviour
     {
         gameOverPanel.SetActive(true);
     }
+
+    public void Restart()
+    {
+        Application.LoadLevel(Application.loadedLevelName);
+    }
 }
