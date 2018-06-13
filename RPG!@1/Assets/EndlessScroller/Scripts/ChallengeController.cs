@@ -6,7 +6,9 @@ public class ChallengeController : MonoBehaviour {
     public float scrollSpeed = 5.0f;
     public GameObject[] challenges;
     public float frequency = 0.5f;
-    float counter = 0.0f;
+    private float counter = 0.0f;
+    private bool isGameOver = false;
+
     public Transform challengesSpawnPoint;
 
     private void Start()
@@ -16,6 +18,8 @@ public class ChallengeController : MonoBehaviour {
 
     private void Update()
     {
+        if (isGameOver) return;
+
         //Generating
         if(counter <= 0.0f)
         {
@@ -49,5 +53,10 @@ public class ChallengeController : MonoBehaviour {
         GameObject newChallenge = Instantiate(challenges[Random.Range(0,challenges.Length)], challengesSpawnPoint.position, Quaternion.identity) as GameObject;
         newChallenge.transform.parent = transform;
         counter = 1.0f;
+    }
+
+    public void GameOver()
+    {
+        isGameOver = true;
     }
 }
