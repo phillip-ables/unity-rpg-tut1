@@ -324,9 +324,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5afd524a9789840b71ad04f8f4874d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 7
+  scrollSpeed: 6.3
   challenges:
   - {fileID: 1549899648827272, guid: 5607977d4ebf1c746bfe5a7bc8677d2a, type: 2}
+  - {fileID: 1510808035561034, guid: 71e6c5cd9d1f8fd4ca64b18858e6d7ec, type: 2}
+  - {fileID: 1497063204867534, guid: b3ebdb0a55b385f4782097a93737ec70, type: 2}
   frequency: 0.3
   challengesSpawnPoint: {fileID: 976494501}
 --- !u!114 &310571659
@@ -1436,7 +1438,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2041463711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.99, y: 0, z: 0}
+  m_LocalPosition: {x: -5.55, y: 0.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
