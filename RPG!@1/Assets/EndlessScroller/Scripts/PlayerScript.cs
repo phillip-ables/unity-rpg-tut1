@@ -9,12 +9,14 @@ public class PlayerScript : MonoBehaviour {
     private bool isGameOver;
 
     Rigidbody2D myRigidbody;
+    ChallengeController myChallengeController;
 
     private void Start()
     {
         myRigidbody = transform.GetComponent<Rigidbody2D>();
         posX = transform.position.x;
         isGameOver = false;
+        myChallengeController = GameObject.FindObjectOfType<ChallengeController>();
     }
 
     private void Update()
@@ -59,6 +61,7 @@ public class PlayerScript : MonoBehaviour {
 
     void GameOver()
     {
-        isGameOver = true;   
+        isGameOver = true;
+        myChallengeController.GameOver();
     }
 }
