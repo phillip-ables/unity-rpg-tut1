@@ -13,6 +13,14 @@ public class PlayerScript : MonoBehaviour {
         myRigidbody = transform.GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if(myRigidbody.velocity.x < 0.0f)
+        {
+            GameOver();
+        }
+    }
+
     private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space) && isGrounded)
@@ -43,5 +51,10 @@ public class PlayerScript : MonoBehaviour {
         {
             isGrounded = false;
         }
+    }
+
+    void GameOver()
+    {
+
     }
 }
