@@ -41,6 +41,11 @@ public class PlayerScript : MonoBehaviour {
         {
             isGrounded = true;
         }
+
+        if(collision.collider.tag == "Enemy")
+        {
+            GameOver();
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
