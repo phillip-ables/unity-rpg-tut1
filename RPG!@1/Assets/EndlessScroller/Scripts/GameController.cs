@@ -7,6 +7,9 @@ public class GameController : MonoBehaviour
 {
     private int score = 0;
 
+    public Text bestText;
+    public Text currentText;
+    public GameObject newText;
     public Text scoreText;
     public GameObject gameOverPanel;
 

@@ -340,6 +340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac3c04508d8dac4bb152021c83d04cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bestText: {fileID: 1789694020}
+  currentText: {fileID: 1578748009}
+  newText: {fileID: 177437636}
   scoreText: {fileID: 353677064}
   gameOverPanel: {fileID: 878673587}
 --- !u!1 &324332215
