@@ -46,7 +46,8 @@ public class ChallengeController : MonoBehaviour {
 
     void GenerateRandomChallenge()
     {
-        Instantiate(challenges[Random.Range(0,challenges.Length)], challengesSpawnPoint.position, Quaternion.identity);
+        GameObject newChallenge = Instantiate(challenges[Random.Range(0,challenges.Length)], challengesSpawnPoint.position, Quaternion.identity) as GameObject;
+        newChallenge.transform.parent = transform;
         counter = 1.0f;
     }
 }
