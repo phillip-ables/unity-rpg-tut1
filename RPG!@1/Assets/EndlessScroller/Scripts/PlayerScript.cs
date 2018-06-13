@@ -12,6 +12,9 @@ public class PlayerScript : MonoBehaviour {
     ChallengeController myChallengeController;
     GameController myGameController;
 
+    public AudioClip jumpSound;
+    AudioSource myAudioPlayer;
+
     private void Start()
     {
         myRigidbody = transform.GetComponent<Rigidbody2D>();
@@ -19,6 +22,8 @@ public class PlayerScript : MonoBehaviour {
         isGameOver = false;
         myChallengeController = GameObject.FindObjectOfType<ChallengeController>();
         myGameController = GameObject.FindObjectOfType<GameController>();
+
+        myAudioPlayer = GameObject.FindObjectOfType<AudioSource>();
     }
 
     private void Update()
@@ -31,9 +36,10 @@ public class PlayerScript : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded && !isGameOver)
         {
             myRigidbody.AddForce(Vector3.up * (jumpPower * myRigidbody.mass * myRigidbody.gravityScale * 20.0f));
+            myAudioPlayer.PlayOneShot(jumpSound);
         }
     }
 
