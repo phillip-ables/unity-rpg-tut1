@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         Application.LoadLevel(Application.loadedLevelName);
     }
 
-    void IncrementScore()
+    public void IncrementScore()
     {
         score++;
         scoreText.text = score.ToString();

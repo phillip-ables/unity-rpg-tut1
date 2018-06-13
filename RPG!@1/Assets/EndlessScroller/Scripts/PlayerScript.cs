@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour {
 
     Rigidbody2D myRigidbody;
     ChallengeController myChallengeController;
+    GameController myGameController;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class PlayerScript : MonoBehaviour {
         posX = transform.position.x;
         isGameOver = false;
         myChallengeController = GameObject.FindObjectOfType<ChallengeController>();
+        myGameController = GameObject.FindObjectOfType<GameController>();
     }
 
     private void Update()
@@ -61,6 +63,15 @@ public class PlayerScript : MonoBehaviour {
         if(collision.collider.tag == "Ground")
         {
             isGrounded = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Star")
+        {
+            myGameController.IncrementScore();
+            Destroy(collision.gameObject);
         }
     }
 
