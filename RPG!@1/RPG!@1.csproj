@@ -249,6 +249,7 @@
   <ItemGroup>
     <Compile Include="Assets\CoRoutines\Test.cs" />
     <Compile Include="Assets\EndlessScroller\Scripts\ChallengeController.cs" />
+    <Compile Include="Assets\EndlessScroller\Scripts\GameController.cs" />
     <Compile Include="Assets\EndlessScroller\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\LaunchArc\LaunchArcMesh.cs" />
     <Compile Include="Assets\LaunchArc\LaunchArcRenderer.cs" />
