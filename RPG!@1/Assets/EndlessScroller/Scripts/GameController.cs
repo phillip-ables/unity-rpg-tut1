@@ -10,6 +10,14 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     public GameObject gameOverPanel;
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Star")
+        {
+            IncrementScore();
+        }
+    }
+
     public void GameOver()
     {
         Invoke("ShowOverPanel", 2.0f);
@@ -17,6 +25,7 @@ public class GameController : MonoBehaviour
 
     void ShowOverPanel()
     {
+        scoreText.gameObject.SetActive(false);
         gameOverPanel.SetActive(true);
     }
 
@@ -24,5 +33,10 @@ public class GameController : MonoBehaviour
     {
         Application.LoadLevel(Application.loadedLevelName);
     }
-    
+
+    void IncrementScore()
+    {
+        score++;
+        scoreText.text = score.ToString();
+    }
 }
