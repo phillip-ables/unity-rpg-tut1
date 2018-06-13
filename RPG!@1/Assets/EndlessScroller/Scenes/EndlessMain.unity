@@ -327,7 +327,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: 6.3
   challenges:
-  - {fileID: 0}
+  - {fileID: 1549899648827272, guid: 5607977d4ebf1c746bfe5a7bc8677d2a, type: 2}
+  - {fileID: 1510808035561034, guid: 71e6c5cd9d1f8fd4ca64b18858e6d7ec, type: 2}
+  - {fileID: 1497063204867534, guid: b3ebdb0a55b385f4782097a93737ec70, type: 2}
+  - {fileID: 1301031923126112, guid: cae61b20240e4564eb0b4d58d74b7498, type: 2}
+  - {fileID: 1982817083570148, guid: bcfb3d83ce14d044ebef2ae57da7f5f1, type: 2}
+  - {fileID: 1455557650769322, guid: fce20fcec6f6c5746a39fca736e55c04, type: 2}
   frequency: 0.3
   challengesSpawnPoint: {fileID: 976494501}
 --- !u!114 &310571659
@@ -862,13 +867,14 @@ GameObject:
   - component: {fileID: 878673588}
   - component: {fileID: 878673590}
   - component: {fileID: 878673589}
+  - component: {fileID: 878673591}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &878673588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -900,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.472}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -921,6 +927,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 878673587}
+--- !u!95 &878673591
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878673587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1762eec86d82ef54fac0a727c485267e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &976494500
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +997,7 @@ RectTransform:
   m_GameObject: {fileID: 989843253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 708145381}
   - {fileID: 1789694018}
@@ -1539,7 +1562,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 3
   m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -1581,3 +1604,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPower: 4.5
   isGrounded: 1
+  jumpSound: {fileID: 8300000, guid: fd98e08c5bea89b4996a4d368fdb18c9, type: 3}
+  scoreSound: {fileID: 8300000, guid: ef874ac0c9b1d2941be258dcc61e8937, type: 3}
+  deathSound: {fileID: 8300000, guid: 65feb9b45e176ba4f8bab7e73cac2948, type: 3}

@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour {
 
     private void Update()
     {
-        if(transform.position.x < posX)
+        if(transform.position.x < posX && !isGameOver)
         {
             GameOver();
         }
@@ -47,7 +47,7 @@ public class PlayerScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Enemy")
+        if (collision.collider.tag == "Enemy" && !isGameOver)
         {
             GameOver();
         }
