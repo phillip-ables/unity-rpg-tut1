@@ -13,6 +13,8 @@ public class PlayerScript : MonoBehaviour {
     GameController myGameController;
 
     public AudioClip jumpSound;
+    public AudioClip scoreSound;
+    public AudioClip deathSound;
     AudioSource myAudioPlayer;
 
     private void Start()
@@ -45,12 +47,7 @@ public class PlayerScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-
-        if(collision.collider.tag == "Enemy")
+        if (collision.collider.tag == "Enemy")
         {
             GameOver();
         }
@@ -78,6 +75,7 @@ public class PlayerScript : MonoBehaviour {
         {
             myGameController.IncrementScore();
             Destroy(collision.gameObject);
+            myAudioPlayer.PlayOneShot(scoreSound);
         }
     }
 
@@ -85,5 +83,6 @@ public class PlayerScript : MonoBehaviour {
     {
         isGameOver = true;
         myChallengeController.GameOver();
+        myAudioPlayer.PlayOneShot(deathSound);
     }
 }
