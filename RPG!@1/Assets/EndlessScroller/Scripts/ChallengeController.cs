@@ -58,5 +58,6 @@ public class ChallengeController : MonoBehaviour {
     public void GameOver()
     {
         isGameOver = true;
+        gameObject.SendMessage("GameOver", SendMessageOptions.RequireReceiver);
     }
 }
