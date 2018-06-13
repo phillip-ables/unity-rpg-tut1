@@ -29,6 +29,16 @@ public class GameController : MonoBehaviour
     void ShowOverPanel()
     {
         scoreText.gameObject.SetActive(false);
+
+        if(score > PlayerPrefs.GetInt("Best", 0))
+        {
+            PlayerPrefs.SetInt("Best", score);
+            newText.SetActive(true);
+        }
+
+        bestText.text = "Best Score : " + PlayerPrefs.GetInt("Best", 0).ToString();
+        currentText.text = "Current Score : " + score.ToString();
+
         gameOverPanel.SetActive(true);
     }
 
