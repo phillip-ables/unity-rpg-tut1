@@ -5,17 +5,21 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
     public float jumpPower = 10.0f;
     public bool isGrounded = false;
+    private float posX = 0.0f;
+    private bool isGameOver;
 
     Rigidbody2D myRigidbody;
 
     private void Start()
     {
         myRigidbody = transform.GetComponent<Rigidbody2D>();
+        posX = transform.position.x;
+        isGameOver = false;
     }
 
     private void Update()
     {
-        if(myRigidbody.velocity.x < 0.0f)
+        if(transform.position.x < posX)
         {
             GameOver();
         }
@@ -55,6 +59,6 @@ public class PlayerScript : MonoBehaviour {
 
     void GameOver()
     {
-
+        isGameOver = true;   
     }
 }
