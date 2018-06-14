@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
-        Invoke("ShowOverPanel", 2.0f);
+        Invoke("ShowOverPanel", 0.5f);
     }
 
     void ShowOverPanel()
@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
 
     public void IncrementScore()
     {
-        score++;
+        score += 10;
         scoreText.text = score.ToString();
     }
 }
