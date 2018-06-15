@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/EndlessScroller/Scenes/EndlessMain.unity
+- path: Assets/Parrallax/Parrallax.unity
   isLoaded: 1
   isActive: 1
