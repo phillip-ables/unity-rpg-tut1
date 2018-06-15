@@ -5,13 +5,14 @@ using UnityEngine;
 public class ScrollingBackgroundScript : MonoBehaviour {
 
     public float backgroundSize;
+    public float paralaxSpeed;
 
     private Transform cameraTransform;
     private Transform[] layers;
     private float viewZone = 10;
     private int leftIndex;
     private int rightIndex;
-
+    private float lastCameraX;
 
     private void Start()
     {
@@ -25,10 +26,16 @@ public class ScrollingBackgroundScript : MonoBehaviour {
 
         leftIndex = 0;
         rightIndex = layers.Length - 1;
+
+        lastCameraX = cameraTransform.position.x;
     }
 
     private void Update()
     {
+        float deltaX = cameraTransform.position.x - lastCameraX;
+        transform.position += Vector3.right * (deltaX * paralaxSpeed);
+        lastCameraX = cameraTransform.position.x;
+
         //we should scroll left
         if(cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
         {
