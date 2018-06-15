@@ -5,19 +5,17 @@ using UnityEngine;
 public class MovementMoving : MonoBehaviour {
 
     public float speed;
-    public float horizontal;
     private Vector3 move;
 
     private void Update()
     {
-        horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        move = new Vector3(horizontal, 0);
-        Camera.main.transform.Translate(move);
+        move = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0);
+        Camera.main.transform.position += move;
     }
 
     private void LateUpdate()
     {
-        transform.position = move;
+        transform.position += move;
     }
 
 }
