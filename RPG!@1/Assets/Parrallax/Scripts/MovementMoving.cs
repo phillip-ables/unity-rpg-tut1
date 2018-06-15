@@ -8,12 +8,6 @@ public class MovementMoving : MonoBehaviour {
     public float horizontal;
     private Vector3 move;
 
-    private void Start()
-    {
-        Camera.main.transform.Translate(10,0,0);
-
-    }
-
     private void Update()
     {
         horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
