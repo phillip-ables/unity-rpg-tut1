@@ -255,6 +255,7 @@
     <Compile Include="Assets\LaunchArc\LaunchArcRenderer.cs" />
     <Compile Include="Assets\MeatBoyMovement\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\MeatBoyMovement\Scripts\Worm.cs" />
+    <Compile Include="Assets\Parrallax\Scripts\MovementMoving.cs" />
     <Compile Include="Assets\RollerBall\Scripts\CameraMotor.cs" />
     <Compile Include="Assets\RollerBall\Scripts\DestroyableObject.cs" />
     <Compile Include="Assets\RollerBall\Scripts\FreeCamera.cs" />
