@@ -18,7 +18,7 @@ public class ScrollingBackgroundScript : MonoBehaviour {
         cameraTransform = Camera.main.transform;
         layers = new Transform[transform.childCount];
 
-        for(int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
             layers[i] = transform.GetChild(i);
         }
@@ -27,6 +27,19 @@ public class ScrollingBackgroundScript : MonoBehaviour {
         rightIndex = layers.Length - 1;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            ScrollLeft();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            ScrollRight();
+        }
+    }
+
+    //three backgrounds now endless
     private void ScrollLeft()
     {
         int lastRight = rightIndex;
