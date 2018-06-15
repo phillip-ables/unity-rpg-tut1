@@ -29,11 +29,12 @@ public class ScrollingBackgroundScript : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        //we should scroll left
+        if(cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
         {
             ScrollLeft();
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if(cameraTransform.position.x > (layers[rightIndex].transform.position.x - viewZone))
         {
             ScrollRight();
         }
