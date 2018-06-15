@@ -26,4 +26,14 @@ public class ScrollingBackgroundScript : MonoBehaviour {
         leftIndex = 0;
         rightIndex = layers.Length - 1;
     }
+
+    private void ScrollLeft()
+    {
+
+    }
+
+    private void ScrollRight()
+    {
+
+    }
 }
